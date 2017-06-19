@@ -39,12 +39,6 @@
                     <polygon id="Fill-29" fill="#CD68A8" points="21.4416551 17.647245 13.9872081 17.647245 13.9563659 17.594445 10.2046339 24.083345 17.6596316 24.083345 17.6899231 24.136145"></polygon>
                     <polygon id="Fill-31" fill="#BC4097" points="17.8181935 10.806565 17.8363684 10.775765 10.3329044 10.775765 14.0664615 17.233315 14.0488374 17.264665 21.5517507 17.264665"></polygon>
                 </g>
-                <g id="Group-2" transform="translate(157.943230, 27.273443) rotate(10.000000) translate(-157.943230, -27.273443) translate(139.443230, 20.273443)">
-                    <rect id="Rectangle" fill="#95247A" x="0.599910163" y="0.655543907" width="36.0603074" height="13" rx="4"></rect>
-                    <text id="BETA" font-family="ArialMT, Arial" font-size="10" font-weight="normal" fill="#FFFFFF">
-                        <tspan x="6.06030738" y="10.6579799">BETA</tspan>
-                    </text>
-                </g>
             </g>
         </g>
     </g>
