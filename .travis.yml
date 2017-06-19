@@ -6,3 +6,10 @@ script:
   - npm install
   - npm install -g gulp
   - gulp default
+
+deploy:
+  provider: s3
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
+  bucket: "swarmpit.io"
+  skip_cleanup: true
