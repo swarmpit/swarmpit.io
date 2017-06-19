@@ -1,0 +1,367 @@
+@import "variables.less";
+@import "mixins.less";
+@import "design.less";
+
+// Global Components
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    .body-font;
+}
+
+a {
+    .transition-all;
+    color: @theme-primary;
+    &:hover,
+    &:focus {
+        color: darken(@theme-primary, 10%);
+    }
+}
+
+hr {
+    max-width: 100px;
+    margin: 25px auto 0;
+    border-width: 0px;
+    border-color: fade(@gray-darker, 10%);
+}
+
+.line {
+    max-width: 100px;
+    margin: 25px auto 0;
+    border-width: 1px;
+    border-color: fade(@gray-darker, 10%);
+}
+
+hr.light {
+    border-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    .heading-font;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+// Navigation
+
+.navbar-default {
+    background-color: white;
+    border-color: fade(@gray-darker, 5%);
+    .transition-all;
+    .heading-font;
+    .navbar-header .navbar-brand {
+        .heading-font;
+        color: @theme-primary;
+        &:hover,
+        &:focus {
+            color: darken(@theme-primary, 10%);
+        }
+    }
+    .navbar-header .navbar-toggle {
+        font-size: 14px;
+        color: @gray-darker;
+        padding: 8px 10px;
+    }
+    .nav {
+        > li {
+            > a {
+                .alt-font;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            > a,
+            > a:focus {
+                color: @gray-darker;
+                &:hover {
+                    color: @theme-primary;
+                }
+            }
+            &.active {
+                > a,
+                > a:focus {
+                    color: @theme-primary !important;
+                    background-color: transparent;
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        background-color: white;
+        border-color: transparent;
+        .navbar-header .navbar-brand {
+            color: fade(white, 70%);
+            &:hover,
+            &:focus {
+                color: white;
+            }
+        }
+        .nav > li > a,
+        .nav > li > a:focus {
+            color: @theme-secondary;
+            &:hover {
+                color: white;
+                background-color: @theme-primary;
+            }
+        }
+        &.affix {
+            background-color: white;
+            border-color: fade(@gray-darker, 10%);
+            .navbar-header .navbar-brand {
+                color: @gray-darker;
+                &:hover,
+                &:focus {
+                    color: @theme-primary;
+                }
+            }
+            .nav > li > a,
+            .nav > li > a:focus {
+                color: @gray-darker;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// Homepage Header
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    overflow-y: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center no-repeat fixed;
+    background-image: url("../img/bg-main.jpg"), @theme-secondary; /* fallback for old browsers */
+    background-image: url("../img/bg-main.jpg"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
+    background-image: url("../img/bg-main.jpg"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    .header-content {
+        text-align: center;
+        padding: 150px 0 50px;
+        position: relative;
+        .header-content-inner {
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+            h1 {
+                margin-top: 0;
+                margin-bottom: 0px;
+                font-size: 30px;
+            }
+            .list-badges {
+                margin-bottom: 25px;
+                img {
+                    height: 50px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+    .device-container {
+        max-width: 300px;
+        margin: 0 auto 100px;
+        .screen img {
+            border-radius: 0px;
+        }
+    }
+    @media (min-width: 768px) {
+        min-height: 100%;
+        .header-content {
+            text-align: left;
+            padding: 0;
+            height: 100vh;
+            .header-content-inner {
+                max-width: none;
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                h1 {
+                    font-size: 25px;
+                }
+            }
+        }
+        .device-container {
+            max-width: none;
+            max-height: calc(100vh - 100px);
+            margin: 120px auto 0;
+        }
+    }
+    @media (min-width: 992px) {
+        .header-content .header-content-inner h1 {
+            font-size: 50px;
+        }
+    }
+}
+
+// Sections
+
+section {
+    padding: 100px 0;
+    h2 {
+        font-size: 50px;
+    }
+}
+
+section.download {
+    padding: 150px 0;
+    position: relative;
+    h2 {
+        margin-top: 0;
+        font-size: 50px;
+    }
+    .badges {
+        .badge-link {
+            display: block;
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                height: 60px;
+            }
+            @media(min-width: 768px) {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+        }
+    }
+    @media(min-width: 768px) {
+        h2 {
+            font-size: 70px;
+        }
+    }
+}
+
+section.tutorial {
+    text-align: center;
+    h2 {
+        margin-top: 0;
+        margin-bottom: 25px;
+        i {
+            color: @brand-google-plus;
+        }
+    }
+ }
+   
+footer {
+    background-color: @gray-darker2;
+    padding: 25px 0;
+    color: fade(white, 30%);
+    text-align: center;
+    p {
+        font-size: 12px;
+        margin: 0;
+    }
+    ul {
+        margin-bottom: 0;
+        li {
+            a {
+                font-size: 12px;
+                color: fade(white, 30%);
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// Bootstrap Overrides
+
+.bg-primary {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center no-repeat fixed;
+    background-image: url("../img/bg2.jpg"),  @theme-primary;
+    background-image: url("../img/bg2.jpg"),  -webkit-linear-gradient(@theme-primary , darken(@theme-primary, 5%));
+    background-image: url("../img/bg2.jpg"),  linear-gradient(@theme-primary , darken(@theme-primary, 5%));
+}
+
+.text-primary {
+    color: @theme-primary;
+}
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+// Button Styles
+.btn-outline {
+    color: white;
+    border-color: white;
+    border: 1px solid;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: white;
+        background-color: @theme-primary;
+        border-color: @theme-primary;
+    }
+}
+
+.btn {
+    .alt-font;
+    /*border-radius: 300px;*/
+}
+
+.btn-xl {
+    padding: 15px 45px;
+    font-size: 11px;
+}
+
+// Extras
+// -- Highlight Color Customization
+::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background: @gray-darker;
+}
+
+::selection {
+    color: white;
+    text-shadow: none;
+    background: @gray-darker;
+}
+
+img::selection {
+    color: white;
+    background: transparent;
+}
+
+img::-moz-selection {
+    color: white;
+    background: transparent;
+}
+
+body {
+    webkit-tap-highlight-color: @gray-darker;
+}
