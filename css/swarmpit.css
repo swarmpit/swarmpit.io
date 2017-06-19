@@ -27,13 +27,14 @@
   border-top: 1px solid #e7e7e7;
 }
 .install {
-  display: inline;
+  /*display:inline;*/
   padding: 12px;
   background-color: #5e469c;
   color: #fff;
   font-size: 1em;
   font-family: monaco;
-  border-radius: 3px;
+  font-weight: bold;
+  border-radius: 6px;
 }
 .code {
   color: #76ab0b;
@@ -50,20 +51,6 @@
 }
 .title {
   font-size: 50px;
-}
-.blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
-}
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
 }
 #nopadding {
   padding: 0px 0;
@@ -350,7 +337,7 @@ section {
   padding: 100px 0;
 }
 section h2 {
-  font-size: 50px;
+  font-size: 39px;
 }
 section.download {
   padding: 150px 0;
