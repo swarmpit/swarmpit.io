@@ -3,7 +3,7 @@ sudo: false
 
 cache:
   directories:
-    - $HOME/.npm
+    - node_modules
 
 node_js:
   - "0.10"
@@ -11,7 +11,6 @@ script:
   - npm install
   - npm install -g gulp
   - gulp default
-  - rm -rf node_modules
 
 deploy:
   provider: s3
