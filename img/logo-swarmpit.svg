@@ -39,12 +39,15 @@
                     <polygon id="Fill-29" fill="#CD68A8" points="21.4416551 17.647245 13.9872081 17.647245 13.9563659 17.594445 10.2046339 24.083345 17.6596316 24.083345 17.6899231 24.136145"></polygon>
                     <polygon id="Fill-31" fill="#BC4097" points="17.8181935 10.806565 17.8363684 10.775765 10.3329044 10.775765 14.0664615 17.233315 14.0488374 17.264665 21.5517507 17.264665"></polygon>
                 </g>
+<<<<<<< HEAD
                 <g id="Group-2" transform="translate(243.113239, 12.277950) rotate(10.000000) translate(-243.113239, -12.277950) translate(220.613239, 3.777950)">
                     <rect id="Rectangle" fill="#CB65A7" x="0.720985735" y="0.787847638" width="43.3381009" height="15.6236969" rx="4"></rect>
                     <text id="BETA" font-family="ArialMT, Arial" font-size="11" font-weight="normal" fill="#FFFFFF">
                         <tspan x="8.61551992" y="12.7885654">BETA</tspan>
                     </text>
                 </g>
+=======
+>>>>>>> origin/master
             </g>
         </g>
     </g>

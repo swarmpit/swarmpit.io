@@ -6,12 +6,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta property="og:url" content="http://swarmpit.com" />
-    <meta property="og:image" content="http://swarmpit.ptrnka.cz/img/banner.jpg" />
+    <meta name="description" content="Lightweight Docker Swarm orchestration">
+    <meta name="author" content="Swarmpit">
+    <meta property="og:url" content="http://swarmpit.io" />
+    <meta property="og:image" content="http://swarmpit.io/img/swarmpit-ikona.png" />
 
-    <title>Swarmpit! Future of docker orchestration</title>
+    <title>swarmpit</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/manifest.json">
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="swarmpit.io">
+    <meta name="application-name" content="swarmpit.io">
+    <meta name="msapplication-config" content="/img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Bootstrap Core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -77,7 +88,7 @@
                         <div class="header-content-inner">
                             <h1><strong>Swarmpit</strong><br>Lightweight Docker Swarm orchestration</h1>
                             <p><!-- Place this tag where you want the button to render. -->
-                            <a class="github-button" href="https://github.com/nohaapav/swarmpit" data-size="large" data-show-count="true" aria-label="Star nohaapav/swarmpit on GitHub">Star</a></p>
+                            <a class="github-button" href="https://github.com/swarmpit/swarmpit" data-size="large" data-show-count="true" aria-label="Star swarmpit/swarmpit on GitHub">Star</a></p>
                             <a href="#download" class="btn btn-outline btn-xl page-scroll">Install</a>
                         </div>
                     </div>
@@ -217,8 +228,9 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h2 class="section-heading">How to install</h2>
                     <hr>
-                    <div class="install"><span class="code"> $ </span> https://github.com/nohaapav/swarmpit.git</div>
-                    <div class="install"><span class="code"> $ </span> https://github.com/nohaapav/swarmpit.git</div>
+                    <pre class="install">
+git clone https://github.com/swarmpit/swarmpit
+docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
                 </div>
             </div>
         </div>
@@ -252,13 +264,13 @@
                 <img src="img/lumir-mrkva-s.jpg" alt="Team Image" class="avatar">
                 <div class="title">
                     <h4>Lumír Mrkva</h4>
-                    <p>Development software</p>
+                    <p>Random code generator</p>
                     <p class="text-muted"></p>
                 </div>
             </div>
       </div>
-   
-  
+
+
   <div class="col-md-2 titleteam">
         <div class="team padd text-center">
             <img src="img/jiri-penzes-s.jpg" alt="Team Image" class="avatar">
@@ -320,7 +332,7 @@
         <div class="row">
            <div class="col-lg-8 col-lg-offset-2 text-center">
                <div class="email-wrapper">
-               <form action="subscribe.php" method="post" id="postcontentsb">
+               <form id="postcontentsb">
              <input type="email" name="email" class="form-control" placeholder="your@email.com" required="">
           <button type="submit" class="btn btn-primary btn-xl">Send </button>
          </form>
@@ -371,20 +383,18 @@
          $(document).ready(function () {
             $("#postcontentsb").submit(function (e) {
                  e.preventDefault();
-                 $.ajax({
-                     type: "POST",
-                     url: "subscribe.php",
-                     data: $("#postcontentsb").serialize(),
-                      success: function (response) {
-                $('[name="email"]').val('');
-                        // alert(response); // FOR ACTUAL RESPONSE
-                 alert('Thank you for your email :-)');
-                     }
+                 var data = {};
+                 $(this).serializeArray().map(function(x){data[x.name] = x.value;});
+
+                 fetch("https://fokgz5bqh2.execute-api.eu-central-1.amazonaws.com/swarmpit/mailing-list", {
+                      method: "POST",
+                      body: JSON.stringify(data)
+                 }).then(function() {
+                    $('.email-wrapper').html("<p>Thank you for subbing!</p>");
                  });
                  e.preventDefault();
-             });
-         
             });
+          });
       </script>
 
 </body>

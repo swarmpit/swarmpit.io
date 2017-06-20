@@ -1,31 +1,25 @@
 {
-  "name": "bootstrap",
-  "title": "Swarmpit",
-  "version": "0.1",
-  "homepage": "",
-  "author": "Bootstrap",
+  "name": "swarmpit",
+  "version": "1.0.0",
+  "author": "swarmpit team",
   "license": {
     "type": "MIT",
-    "url": ""
+    "url": "http://www.swarmpit.io"
+  },
+  "dependencies": {
+    "gulp-install": "^1.1.0",
+    "simple-line-icons": "^2.3.2"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.13.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.10",
+    "gulp-clean-css": "2.0.10",
     "gulp-header": "^1.8.7",
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",
     "jquery": "^1.11.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "dependencies": {
-    "gulp-install": "^1.1.0",
-    "simple-line-icons": "^2.3.2"
   }
 }
