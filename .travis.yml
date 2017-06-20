@@ -3,8 +3,8 @@ sudo: false
 
 cache:
   directories:
-    - node_modules
-    
+    - $HOME/.npm
+
 node_js:
   - "0.10"
 script:
