@@ -11,6 +11,7 @@ script:
   - npm install
   - npm install -g gulp
   - gulp default
+  - mv node_modules /tmp
 
 deploy:
   provider: s3
@@ -19,3 +20,6 @@ deploy:
   bucket: "swarmpit.io"
   skip_cleanup: true
   region: eu-central-1
+
+after_deploy:
+  - mv /tmp/node_modules .
