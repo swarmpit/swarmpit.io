@@ -55,18 +55,43 @@
 }
 
 .heading-font {
-	font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+	font-family: 'Helvetica', 'Arial', 'sans-serif';
 	font-size: 24px;
 	font-weight: 300;
 	letter-spacing: 0px;
 }
 
 .body-font {
-	font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+	font-family: 'Helvetica', 'Arial', 'sans-serif';
 }
 
 .alt-font {
-	font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+	font-family: 'Helvetica', 'Arial', 'sans-serif';
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+
+.wf-active {
+	body {
+		-webkit-text-size-adjust: 100%;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		font-variant-numeric: lining-nums;
+		-webkit-font-variant-ligatures: common-ligatures;
+		font-variant-ligatures: common-ligatures;
+		-webkit-font-feature-settings: "kern", "liga", "clig", "lnum";
+		font-feature-settings: "kern", "liga", "clig", "lnum"
+	
+	}
+	.heading-font {
+		font-family: 'Lato';
+	}
+
+	.body-font {
+		font-family: 'Lato';
+	}
+
+	.alt-font {
+		font-family: 'Lato';
+	}
 }
