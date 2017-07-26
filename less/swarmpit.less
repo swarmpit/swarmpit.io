@@ -55,6 +55,28 @@ p {
     margin-top: 8px;
 }
 
+.wf-active {
+    body {
+        -webkit-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-variant-numeric: lining-nums;
+        -webkit-font-variant-ligatures: common-ligatures;
+        font-variant-ligatures: common-ligatures;
+        -webkit-font-feature-settings: "kern", "liga", "clig", "lnum";
+        font-feature-settings: "kern", "liga", "clig", "lnum";
+        font-family: 'Lato';
+
+    }
+    h1, h2, h3, h4, h5, h6, p,
+    .heading-font,
+    .body-font,
+    .alt-font {
+        font-family: 'Lato';
+    }
+}
+
+
 // Navigation
 
 .navbar-default {
@@ -264,7 +286,7 @@ section.tutorial {
         }
     }
  }
-   
+
 footer {
     background-color: @gray-darker2;
     padding: 25px 0;
