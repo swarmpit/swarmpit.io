@@ -1,0 +1,23 @@
+{
+    "name": "Swarmpit",
+    "description": "Lightweight Docker Swarm Management UI",
+    "repository": {
+        "url": "https://github.com/swarmpit/swarmpit",
+        "license": "EPL",
+        "tests": "https://travis-ci.org/swarmpit/swarmpit/"
+    },
+    "bugs": {
+        "list": "https://github.com/swarmpit/swarmpit/issues",
+        "report": "https://github.com/swarmpit/swarmpit/issues/new"
+    },
+    "urls": {
+        "prod": "https://swarmpit.io",
+        "demo1": "http://labs.play-with-docker.com/?stack=/swarmpit/swarmpit/latest"
+    },
+    "keywords": [
+        "clojure",
+        "clojurescript",
+        "docker",
+        "swarm"
+    ]
+}
