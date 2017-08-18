@@ -10,9 +10,6 @@ cache:
   pip: true
   directories:
     - node_modules
-
-node_js:
-  - 6
   
 install:
   - npm install -ys --no-progress --depth=0

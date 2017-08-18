@@ -5,6 +5,7 @@ website
 ### Install dependencies
 
 ```
+nvm use
 npm install -g gulp
 npm install
 ```
