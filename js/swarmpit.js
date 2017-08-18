@@ -1,8 +1,8 @@
-(function($) {
+(function ($) {
     "use strict";
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $(document).on('click', 'a.page-scroll', function(event) {
+    $(document).on('click', 'a.page-scroll', function (event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
@@ -11,7 +11,7 @@
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
+    $('.navbar-collapse ul li a').click(function () {
         $('.navbar-toggle:visible').click();
     });
 
@@ -24,17 +24,20 @@
 
     $(function () {
         $("#postcontentsb").submit(function (e) {
+            if (typeof window["fetch"] === "undefined") return;
             e.preventDefault();
             var data = {};
-            $(this).serializeArray().map(function(x){data[x.name] = x.value;});
+            var $form = $(this);
+            $form.serializeArray().forEach(function (x) {
+                data[x.name] = x.value;
+            });
 
-            fetch("https://fokgz5bqh2.execute-api.eu-central-1.amazonaws.com/swarmpit/mailing-list", {
-                method: "POST",
+            fetch($form.attr("action"), {
+                method: $form.attr("method").toUpperCase(),
                 body: JSON.stringify(data)
-            }).then(function() {
+            }).then(function () {
                 $('.email-wrapper').html("<p>Thank you for submitting!</p>");
             });
-            e.preventDefault();
         });
     });
 })(jQuery); // End of use strict
