@@ -1,9 +1,12 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var browserSync = require('browser-sync').create();
-var cleanCSS = require('gulp-clean-css');
+var cssnano = require("cssnano");
+var autoprefixer = require("autoprefixer");
+var postcss = require('gulp-postcss');
 var htmlmin = require("gulp-htmlmin");
 var rename = require("gulp-rename");
+var size = require("gulp-size");
 var uglify = require('gulp-uglify');
 
 // Compile LESS files from /less into /css
@@ -18,9 +21,20 @@ gulp.task('less', function () {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function () {
+    const plugins = [
+        autoprefixer({
+            browsers: ["> 5%", "last 4 versions", "IE 8"],
+            cascade: false
+        }),
+        cssnano({
+            reduceIdents: false,
+            zindex: false
+        })
+    ];
     return gulp.src('s3/swarmpit.io/css/swarmpit.css')
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(postcss(plugins))
         .pipe(rename({ suffix: '.min' }))
+        .pipe(size({ title: "CSS", gzip: true }))
         .pipe(gulp.dest('s3/swarmpit.io/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -32,6 +46,7 @@ gulp.task('minify-js', function () {
     return gulp.src('src/js/swarmpit.js')
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
+        .pipe(size({ title: "JS", gzip: true }))
         .pipe(gulp.dest('s3/swarmpit.io/js'))
         .pipe(browserSync.reload({
             stream: true
@@ -53,6 +68,7 @@ gulp.task('minify-html', function () {
            removeScriptTypeAttributes: true,
            removeStyleLinkTypeAttributes: true
        }))
+       .pipe(size({ title: "HTML", gzip: true }))
        .pipe(gulp.dest('s3/swarmpit.io'))
 });
 
