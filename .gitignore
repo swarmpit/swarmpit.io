@@ -5,3 +5,5 @@ s3/swarmpit.io/js/*.min.js
 s3/swarmpit.io/lib/simple-line-icons/
 
 .idea/
+
+*.log

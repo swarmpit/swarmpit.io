@@ -72,14 +72,8 @@ gulp.task('minify-html', function () {
        .pipe(gulp.dest('s3/swarmpit.io'))
 });
 
-// Copy lib libraries from /node_modules into /lib
-gulp.task('copy', function () {
-    gulp.src(['node_modules/simple-line-icons/*/*'])
-        .pipe(gulp.dest('s3/swarmpit.io/lib/simple-line-icons'));
-});
-
 // Run everything
-gulp.task('prod', ['minify-html', 'minify-css', 'minify-js', 'copy']);
+gulp.task('prod', ['minify-html', 'minify-css', 'minify-js']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function () {
@@ -91,7 +85,7 @@ gulp.task('browserSync', function () {
 });
 
 // Dev task with browserSync
-gulp.task('default', ['browserSync', 'less', 'minify-css', 'minify-js'], function () {
+gulp.task('default', ['browserSync', 'minify-css', 'minify-js'], function () {
     gulp.watch('src/less/*.less', ['less']);
     gulp.watch('s3/swarmpit.io/css/*.css', ['minify-css']);
     gulp.watch('src/js/*.js', ['minify-js']);

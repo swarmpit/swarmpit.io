@@ -2,12 +2,15 @@
   "name": "swarmpit.io",
   "version": "1.0.0",
   "author": "TopMonks, s.r.o.",
-  "license": {
-    "type": "EPL",
-    "url": "https://www.eclipse.org/legal/epl-v10.html"
+  "license": "EPL-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swarmpit/swarmpit.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/swarmpit/swarmpit.io/issues"
   },
   "dependencies": {
-    "simple-line-icons": "^2.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -21,5 +24,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "start": "gulp"
   }
 }
