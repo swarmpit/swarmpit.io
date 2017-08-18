@@ -1,16 +1,25 @@
 language: node_js
 sudo: false
 
+git:
+  depth: 10
+  lfs_skip_smudge: true
+  
 cache:
+  pip: true
   directories:
     - node_modules
 
 node_js:
   - 6
+  
+install:
+  - npm install -ys --no-progress --depth=0
+  - npm install -g gulp
+  - pip install -q --upgrade pip
+  - pip install -q awscli
 
 script:
-  - npm install
-  - npm install -g gulp
   - gulp default
   - mkdir deploy
   - rsync -av . deploy --exclude node_modules --exclude .git
@@ -25,3 +34,10 @@ deploy:
   local_dir: deploy
   on:
     branch: master
+
+after_deploy:
+  - export AWS_ACCESS_KEY_ID=$AWS_CLOUDFRONT_ACCESS_KEY
+  - export AWS_SECRET_ACCESS_KEY=$AWS_CLOUDFRONT_SECRET_KEY
+  - export AWS_DEFAULT_REGION=$AWS_REGION
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
