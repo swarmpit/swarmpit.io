@@ -11,12 +11,14 @@
     "url": "https://github.com/swarmpit/swarmpit.io/issues"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "browser-sync": "^2.18.13",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-install": "^1.1.0",
     "gulp-less": "^3.3.2",
