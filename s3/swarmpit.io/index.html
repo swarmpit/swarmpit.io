@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="https://schema.org/SoftwareApplication">
 <head>
     <meta charset="utf-8">
-    <title>Swarmpit</title>
+    <title itemprop="name">Swarmpit</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
@@ -125,7 +125,7 @@
                 <script async defer src="https://buttons.github.io/buttons.js"></script>
                 <div class="header-content">
                     <div class="header-content-inner">
-                        <h1><strong>Swarmpit</strong><br>Lightweight Docker Swarm management UI</h1>
+                        <h1><strong>Swarmpit</strong><br><span itemprop="description">Lightweight Docker Swarm management UI</span></h1>
                         <p><a class="github-button" href="https://github.com/swarmpit/swarmpit" data-size="large"
                               data-show-count="true" aria-label="Star swarmpit/swarmpit on GitHub">Star</a></p>
                         <a href="#download" class="btn btn-outline btn-xl page-scroll">Install</a>
@@ -138,7 +138,7 @@
                     <div class="device-mockup imac">
                         <div class="device">
                             <div class="screen">
-                                <img src="img/demo-screen-1.gif" class="img-responsive" alt="">
+                                <img itemprop="screenshot" src="img/demo-screen-1.gif" class="img-responsive" alt="">
                             </div>
                             <div class="button">
                                 <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -179,7 +179,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/example.jpg" alt="">
+                    <img class="img-responsive" src="img/example.jpg" alt="" itemprop="image">
                 </div>
             </div>
 
@@ -204,7 +204,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-sm-pull-5  col-sm-6">
-                    <img class="img-responsive" src="img/example2.jpg" alt="">
+                    <img class="img-responsive" src="img/example2.jpg" alt="" itemprop="image">
                 </div>
             </div>
 
@@ -227,7 +227,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/example3.jpg" alt="">
+                    <img class="img-responsive" src="img/example3.jpg" alt="" itemprop="image">
                 </div>
             </div>
 
@@ -252,7 +252,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-sm-pull-5  col-sm-6">
-                    <img class="img-responsive" src="img/example4.jpg" alt="">
+                    <img class="img-responsive" src="img/example4.jpg" alt="" itemprop="image">
                 </div>
             </div>
 
@@ -275,7 +275,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/example5.jpg" alt="">
+                    <img class="img-responsive" src="img/example5.jpg" alt="" itemprop="image">
                 </div>
             </div>
 
@@ -327,78 +327,83 @@ docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
     <div class="container">
         <div class="row">
             <div class="col-md-2 col-md-offset-1 titleteam">
-                <div class="team padd text-center">
-                    <img src="img/lumir-mrkva-s.jpg" alt="photo: Lumír Mrkva" class="avatar">
+                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <img src="img/lumir-mrkva-s.jpg" alt="photo: Lumír Mrkva" class="avatar" itemprop="image">
                     <div class="title">
-                        <h5 class="name">Lumír Mrkva</h5>
-                        <p><a href="https://twitter.com/mrq1911" title="Lumír Mrkva's Twitter profile"><i
+                        <h5 class="name" itemprop="name">Lumír Mrkva</h5>
+                        <p><a href="https://twitter.com/mrq1911" title="Lumír Mrkva's Twitter profile"
+                              itemprop="sameAs"><i
                                 class="icon-social-twitter"></i></a>&nbsp;&nbsp;
-                            <a href="https://github.com/lumir-mrkva" title="Lumír Mrkva' Github profile"><i
+                            <a href="https://github.com/lumir-mrkva" title="Lumír Mrkva' Github profile"
+                               itemprop="sameAs"><i
                                     class="icon-social-github"></i></a></p>
                     </div>
                 </div>
             </div>
 
-
             <div class="col-md-2 titleteam">
-                <div class="team padd text-center">
-                    <img src="img/jiri-penzes-s.jpg" alt="photo: Jirka Pénzeš" class="avatar">
+                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <img src="img/jiri-penzes-s.jpg" alt="photo: Jirka Pénzeš" class="avatar" itemprop="image">
                     <div class="title">
-                        <h5 class="name">Jirka Pénzeš</h5>
-                        <p><a href="https://twitter.com/jirkapenzes" title="Jirka Pénzeš's Twitter profile"><i
+                        <h5 class="name" itemprop="name">Jirka Pénzeš</h5>
+                        <p><a href="https://twitter.com/jirkapenzes" title="Jirka Pénzeš's Twitter profile"
+                              itemprop="sameAs"><i
                                 class="icon-social-twitter"></i></a>&nbsp;&nbsp;
-                            <a href="https://github.com/jirkapenzes" title="Jirka Pénzeš's Github profile"><i
+                            <a href="https://github.com/jirkapenzes" title="Jirka Pénzeš's Github profile"
+                               itemprop="sameAs"><i
                                     class="icon-social-github"></i></a>&nbsp;&nbsp;
-                            <a href="https://cz.linkedin.com/in/jirkapenzes" title="Jirka Pénzeš's LinkedIn profile"><i
+                            <a href="https://cz.linkedin.com/in/jirkapenzes" title="Jirka Pénzeš's LinkedIn profile"
+                               itemprop="sameAs"><i
                                     class="icon-social-linkedin"></i></a></p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-2 titleteam">
-                <div class="team padd text-center">
-                    <img src="img/pavol-noha-s.jpg" alt="photo: Pavol Noha" class="avatar">
+                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <img src="img/pavol-noha-s.jpg" alt="photo: Pavol Noha" class="avatar" itemprop="image">
                     <div class="title">
-                        <h5 class="name">Pavol Noha</h5>
-                        <p><a href="https://twitter.com/nohaapav" title="Pavol Noha's Twitter profile"><i
+                        <h5 class="name" itemprop="name">Pavol Noha</h5>
+                        <p><a href="https://twitter.com/nohaapav" title="Pavol Noha's Twitter profile"
+                              itemprop="sameAs"><i
                                 class="icon-social-twitter"></i></a>&nbsp;&nbsp;
-                            <a href="https://github.com/nohaapav" title="Pavol Noha's Github profile"><i
+                            <a href="https://github.com/nohaapav" title="Pavol Noha's Github profile" itemprop="sameAs"><i
                                     class="icon-social-github"></i></a>&nbsp;&nbsp;
                             <a href="https://cz.linkedin.com/in/pavol-noha-0220184a"
-                               title="Pavol Noha's LinedIn profile"><i
+                               title="Pavol Noha's LinedIn profile" itemprop="sameAs"><i
                                     class="icon-social-linkedin"></i></a></p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-2 titleteam">
-                <div class="team padd text-center">
-                    <img src="img/pavel-trnka-s.jpg" alt="photo: Pavel Trnka" class="avatar">
+                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <img src="img/pavel-trnka-s.jpg" alt="photo: Pavel Trnka" class="avatar" itemprop="image">
                     <div class="title">
-                        <h5 class="name">Pavel Trnka</h5>
-                        <p><a href="https://twitter.com/fromen" title="Pavel Trnka's Twitter profile"><i
+                        <h5 class="name" itemprop="name">Pavel Trnka</h5>
+                        <p><a href="https://twitter.com/fromen" title="Pavel Trnka's Twitter profile" itemprop="sameAs"><i
                                 class="icon-social-twitter"></i></a>&nbsp;&nbsp;
-                            <a href="https://cz.pinterest.com/fromen/" title="Pavel Trnka's Pinterest profile"><i
+                            <a href="https://cz.pinterest.com/fromen/" title="Pavel Trnka's Pinterest profile"
+                               itemprop="sameAs"><i
                                     class="icon-social-pinterest"></i></a>&nbsp;&nbsp;
                             <a href="https://www.linkedin.com/in/pavel-trnka-a2045b76/n"
-                               title="Pavel Trnka's LinkedIn profile"><i
+                               title="Pavel Trnka's LinkedIn profile" itemprop="sameAs"><i
                                     class="icon-social-linkedin"></i></a></p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-2 titleteam">
-                <div class="team padd text-center">
-                    <img src="img/janjanko-s.jpg" alt="photo: Jan Lopusek" class="avatar">
+                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <img src="img/janjanko-s.jpg" alt="photo: Jan Lopusek" class="avatar" itemprop="image">
                     <div class="title">
-                        <h5 class="name">Jan Lopusek</h5>
+                        <h5 class="name" itemprop="name">Jan Lopusek</h5>
                         <p><a href="https://cz.linkedin.com/in/jan-lopusek-9390a51a"
-                              title="Jan Lopusek's LinkedIn profile"><i
+                              title="Jan Lopusek's LinkedIn profile" itemprop="sameAs"><i
                                 class="icon-social-linkedin"></i></a></p>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
