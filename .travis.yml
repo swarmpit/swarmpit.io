@@ -21,18 +21,16 @@ install:
   - pip install -q awscli
 
 script:
-  - gulp default
-  - mkdir deploy
-  - rsync -av . deploy --exclude node_modules --exclude .git
+  - gulp prod
 
 deploy:
   provider: s3
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: "$AWS_SECRET_KEY"
   bucket: "swarmpit.io"
-  skip_cleanup: true
+  skip_cleanup: false
   region: eu-central-1
-  local_dir: deploy
+  local_dir: "s3/swarmpit.io/"
   on:
     branch: master
 

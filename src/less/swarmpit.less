@@ -25,7 +25,7 @@ a {
 hr {
     max-width: 100px;
     margin: 25px auto 0;
-    border-width: 0px;
+    border-width: 0;
     border-color: fade(@gray-darker, 10%);
 }
 
@@ -174,9 +174,9 @@ header {
     background-size: cover;
     -o-background-size: cover;
     background-position: center no-repeat fixed;
-    background-image: url("../img/bg-main.jpg"), @theme-secondary; /* fallback for old browsers */
-    background-image: url("../img/bg-main.jpg"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
-    background-image: url("../img/bg-main.jpg"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url("/img/bg-main.jpg"), @theme-secondary; /* fallback for old browsers */
+    background-image: url("/img/bg-main.jpg"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
+    background-image: url("/img/bg-main.jpg"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     .header-content {
         text-align: center;
@@ -188,7 +188,7 @@ header {
             margin: 0 auto;
             h1 {
                 margin-top: 0;
-                margin-bottom: 0px;
+                margin-bottom: 0;
                 font-size: 30px;
             }
             .list-badges {
@@ -204,7 +204,7 @@ header {
         max-width: 300px;
         margin: 0 auto 100px;
         .screen img {
-            border-radius: 0px;
+            border-radius: 0;
         }
     }
     @media (min-width: 768px) {
@@ -321,9 +321,9 @@ footer {
     background-size: cover;
     -o-background-size: cover;
     background-position: center no-repeat fixed;
-    background-image: url("../img/bg2.jpg"),  @theme-primary;
-    background-image: url("../img/bg2.jpg"),  -webkit-linear-gradient(@theme-primary , darken(@theme-primary, 5%));
-    background-image: url("../img/bg2.jpg"),  linear-gradient(@theme-primary , darken(@theme-primary, 5%));
+    background-image: url("/img/bg2.jpg"),  @theme-primary;
+    background-image: url("/img/bg2.jpg"),  -webkit-linear-gradient(@theme-primary , darken(@theme-primary, 5%));
+    background-image: url("/img/bg2.jpg"),  linear-gradient(@theme-primary , darken(@theme-primary, 5%));
 }
 
 .text-primary {
@@ -385,5 +385,5 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: @gray-darker;
+    -webkit-tap-highlight-color: @gray-darker;
 }

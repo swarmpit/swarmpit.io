@@ -1,96 +1,85 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var browserSync = require('browser-sync').create();
-var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
+var htmlmin = require("gulp-htmlmin");
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
-var pkg = require('./package.json');
-
-// Set the banner content
-var banner = ['/*!\n',
-    ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-    ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-    ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
-    ' */\n',
-    ''
-].join('');
 
 // Compile LESS files from /less into /css
-gulp.task('less', function() {
-    return gulp.src('less/swarmpit.less')
+gulp.task('less', function () {
+    return gulp.src('src/less/swarmpit.less')
         .pipe(less())
-        .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('s3/swarmpit.io/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
 });
 
 // Minify compiled CSS
-gulp.task('minify-css', ['less'], function() {
-    return gulp.src('css/swarmpit.css')
+gulp.task('minify-css', ['less'], function () {
+    return gulp.src('s3/swarmpit.io/css/swarmpit.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('s3/swarmpit.io/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
 });
 
 // Minify JS
-gulp.task('minify-js', function() {
-    return gulp.src('js/swarmpit.js')
+gulp.task('minify-js', function () {
+    return gulp.src('src/js/swarmpit.js')
         .pipe(uglify())
-        .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('js'))
+        .pipe(gulp.dest('s3/swarmpit.io/js'))
         .pipe(browserSync.reload({
             stream: true
         }))
 });
 
+gulp.task('minify-html', function () {
+   return gulp.src('s3/swarmpit.io/index.html')
+       .pipe(htmlmin({
+           collapseWhitespace: true,
+           collapseBooleanAttributes: true,
+           decodeEntities: true,
+           minifyCSS: true,
+           minifyJS: true,
+           removeAttributeQuotes: true,
+           removeComments: true,
+           removeOptionalTags: true,
+           removeRedundantAttributes: true,
+           removeScriptTypeAttributes: true,
+           removeStyleLinkTypeAttributes: true
+       }))
+       .pipe(gulp.dest('s3/swarmpit.io'))
+});
+
 // Copy lib libraries from /node_modules into /lib
-gulp.task('copy', function() {
-    gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
-        .pipe(gulp.dest('lib/bootstrap'))
-
-    gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('lib/jquery'))
-
+gulp.task('copy', function () {
     gulp.src(['node_modules/simple-line-icons/*/*'])
-        .pipe(gulp.dest('lib/simple-line-icons'))
-
-
-    gulp.src([
-            'node_modules/font-awesome/**',
-            '!node_modules/font-awesome/**/*.map',
-            '!node_modules/font-awesome/.npmignore',
-            '!node_modules/font-awesome/*.txt',
-            '!node_modules/font-awesome/*.md',
-            '!node_modules/font-awesome/*.json'
-        ])
-        .pipe(gulp.dest('lib/font-awesome'))
-})
+        .pipe(gulp.dest('s3/swarmpit.io/lib/simple-line-icons'));
+});
 
 // Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('prod', ['minify-html', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function () {
     browserSync.init({
         server: {
-            baseDir: ''
-        },
+            baseDir: 's3/swarmpit.io'
+        }
     })
-})
+});
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
-    gulp.watch('less/*.less', ['less']);
-    gulp.watch('css/*.css', ['minify-css']);
-    gulp.watch('js/*.js', ['minify-js']);
+gulp.task('default', ['browserSync', 'less', 'minify-css', 'minify-js'], function () {
+    gulp.watch('src/less/*.less', ['less']);
+    gulp.watch('s3/swarmpit.io/css/*.css', ['minify-css']);
+    gulp.watch('src/js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
-    gulp.watch('*.html', browserSync.reload);
-    gulp.watch('js/**/*.js', browserSync.reload);
+    gulp.watch('s3/swarmpit.io/*.html', browserSync.reload);
+    gulp.watch('s3/swarmpit.io/js/**/*.js', browserSync.reload);
 });

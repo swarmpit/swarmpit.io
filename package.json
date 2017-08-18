@@ -1,10 +1,10 @@
 {
-  "name": "swarmpit",
+  "name": "swarmpit.io",
   "version": "1.0.0",
-  "author": "swarmpit team",
+  "author": "TopMonks, s.r.o.",
   "license": {
-    "type": "MIT",
-    "url": "http://www.swarmpit.io"
+    "type": "EPL",
+    "url": "https://www.eclipse.org/legal/epl-v10.html"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -16,7 +16,7 @@
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "2.0.10",
-    "gulp-header": "^1.8.7",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-install": "^1.1.0",
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
