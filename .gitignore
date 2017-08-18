@@ -7,3 +7,5 @@ s3/swarmpit.io/lib/simple-line-icons/
 .idea/
 
 *.log
+
+src/css/swarmpit.css
