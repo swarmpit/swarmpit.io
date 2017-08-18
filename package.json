@@ -26,6 +26,7 @@
     "gulp-uglify": "^3.0.0"
   },
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp prod"
   }
 }

@@ -13,12 +13,11 @@ cache:
   
 install:
   - npm install -ys --no-progress --depth=0
-  - npm install -g gulp
   - pip install -q --upgrade pip
   - pip install -q awscli
 
 script:
-  - gulp prod
+  - npm run build
 
 deploy:
   provider: s3

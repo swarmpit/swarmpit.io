@@ -13,11 +13,11 @@ npm install
 ### Run dev server
 
 ```
-gulp
+npm start
 ```
 
 ### Build
 
 ```
-gulp prod
+npm run build
 ```
