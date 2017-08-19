@@ -198,8 +198,8 @@ header {
   background-size: cover;
   background-position: center;
   background-color: @theme-secondary;
-  background-image: url("/img/bg-main.jpg"); /* fallback for old browsers */
-  background-image: url("/img/bg-main.jpg"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_auto,dpr_auto,f_auto/https://swarmpit.io/img/background.png"); /* fallback for old browsers */
+  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_auto,dpr_auto,f_auto/https://swarmpit.io/img/background.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
   .header-content {
     text-align: center;
@@ -341,14 +341,12 @@ footer {
 // Bootstrap Overrides
 
 .bg-primary {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
-  background-position: center no-repeat fixed;
-  background-image: url("/img/bg2.jpg"), @theme-primary;
-  background-image: url("/img/bg2.jpg"), -webkit-linear-gradient(@theme-primary, darken(@theme-primary, 5%));
-  background-image: url("/img/bg2.jpg"), linear-gradient(@theme-primary, darken(@theme-primary, 5%));
+  background-position: 50%;
+  background-color: @theme-secondary;
+  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_auto,dpr_auto,f_auto/https://swarmpit.io/img/background-2.png");
+  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_auto,dpr_auto,f_auto/https://swarmpit.io/img/background-2.png"),
+                    linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
 }
 
 .text-primary {
