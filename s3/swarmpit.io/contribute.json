@@ -6,6 +6,15 @@
         "license": "EPL",
         "tests": "https://travis-ci.org/swarmpit/swarmpit/"
     },
+    "participate": {
+        "irc": "irc://irc.gitter.im/#swarmpit_io/swarmpit",
+        "irc-contacts": [
+            "lumir-mrkva",
+            "nohaapav",
+            "jirkapenzes",
+            "jinjanko"
+        ]
+    },
     "bugs": {
         "list": "https://github.com/swarmpit/swarmpit/issues",
         "report": "https://github.com/swarmpit/swarmpit/issues/new"
