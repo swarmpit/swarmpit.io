@@ -185,11 +185,17 @@ header {
   position: relative;
   width: 100%;
   overflow-y: hidden;
+  background: @theme-secondary url("https://res.cloudinary.com/swarmpit/image/fetch/q_90,dpr_auto,f_auto,w_1920,c_scale/http://swarmpit.io/img/background.png") center;
   background-size: cover;
-  background-position: center;
-  background-color: @theme-secondary;
-  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_auto,dpr_auto,f_auto/https://swarmpit.io/img/background.png"); /* fallback for old browsers */
-  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_auto,dpr_auto,f_auto/https://swarmpit.io/img/background.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  @media screen and (max-width: 420px) {
+    background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_90,dpr_auto,f_auto,w_420,c_scale/http://swarmpit.io/img/background.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+  }
+  @media screen and (min-width: 421px) and (max-width: 980px) {
+    background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_90,dpr_auto,f_auto,w_980,c_scale/http://swarmpit.io/img/background.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%)
+  }
+  @media screen and (min-width: 981px) {
+    background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_90,dpr_auto,f_auto,w_1920,c_scale/http://swarmpit.io/img/background.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+  }
   color: white;
   .header-content {
     text-align: center;
@@ -274,7 +280,7 @@ header {
 }
 .device-mockup.imac > .device {
   padding-bottom: 80.46663049376018%;
-  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/f_auto/http://swarmpit.io/img/imac.png");
+  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/f_auto,dpr_auto/http://swarmpit.io/img/imac.png");
 }
 
 // Sections
@@ -356,12 +362,20 @@ footer {
 // Bootstrap Overrides
 
 .bg-primary {
+  background: @theme-secondary url("https://res.cloudinary.com/swarmpit/image/fetch/q_80,f_auto,w_1920,c_scale/https://swarmpit.io/img/background-2.png") 50%;
   background-size: cover;
-  background-position: 50%;
-  background-color: @theme-secondary;
-  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_auto,dpr_auto,f_auto/https://swarmpit.io/img/background-2.png");
-  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_auto,dpr_auto,f_auto/https://swarmpit.io/img/background-2.png"),
-                    linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+  @media screen and (max-width: 420px) {
+    background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_80,dpr_auto,f_auto,w_420,c_scale/http://swarmpit.io/img/background-2.png"),
+      linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+  }
+  @media screen and (min-width: 421px) and (max-width: 980px) {
+    background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_80,dpr_auto,f_auto,w_980,c_scale/http://swarmpit.io/img/background-2.png"),
+      linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+  }
+  @media screen and (min-width: 981px) {
+    background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_80,dpr_auto,f_auto,w_1920,c_scale/http://swarmpit.io/img/background-2.png"),
+    linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+  }
 }
 
 .text-primary {
