@@ -45,7 +45,12 @@ gulp.task('minify-css', ['less'], function () {
 
 // Minify JS
 gulp.task('minify-js', function () {
-    return gulp.src(['node_modules/bootstrap/js/affix.js', 'node_modules/bootstrap/js/collapse.js', 'src/js/swarmpit.js'])
+    return gulp.src([
+        'node_modules/jquery.easing/jquery.easing.js',
+        'node_modules/bootstrap/js/affix.js',
+        'node_modules/bootstrap/js/collapse.js',
+        'src/js/swarmpit.js'
+    ])
         .pipe(concat('swarmpit.js'))
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))

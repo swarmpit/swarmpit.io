@@ -46,27 +46,20 @@ a {
 hr {
   max-width: 100px;
   margin: 25px auto 0;
-  border-width: 0;
-  border-color: fade(@gray-darker, 10%);
+  border: 0 fade(@gray-darker, 10%);
 }
 
 .line {
   max-width: 100px;
   margin: 25px auto 0;
-  border-width: 1px;
-  border-color: fade(@gray-darker, 10%);
+  border: 1px fade(@gray-darker, 10%);
 }
 
 hr.light {
   border-color: white;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   .heading-font;
 }
 
@@ -82,9 +75,7 @@ p {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-variant-numeric: lining-nums;
-    -webkit-font-variant-ligatures: common-ligatures;
     font-variant-ligatures: common-ligatures;
-    -webkit-font-feature-settings: "kern", "liga", "clig", "lnum";
     font-feature-settings: "kern", "liga", "clig", "lnum";
     font-family: 'Lato';
 
@@ -193,7 +184,6 @@ img.img-responsive {
 header {
   position: relative;
   width: 100%;
-  min-height: auto;
   overflow-y: hidden;
   background-size: cover;
   background-position: center;
@@ -226,10 +216,6 @@ header {
   .device-container {
     max-width: 300px;
     margin: 0 auto 100px;
-
-    .device-mockup.imac > .device {
-      background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/f_auto/https://swarmpit.io/lib/device-mockups/imac/imac.png");
-    }
   }
   @media (min-width: 768px) {
     min-height: 100%;
@@ -260,6 +246,36 @@ header {
       font-size: 50px;
     }
   }
+}
+
+// Device mockups
+
+.device-wrapper {
+  max-width: 300px;
+  width: 100%;
+}
+.device {
+  position: relative;
+  background-size: cover;
+}
+.device .screen {
+  position: absolute;
+  background-size: cover;
+  background-image: url("https://static.pexels.com/photos/50594/sea-bay-waterfront-beach-50594.jpeg");
+}
+.device .button {
+  position: absolute;
+  cursor: pointer;
+}
+.device-mockup.imac > .device .screen {
+  top: 8.20707071%;
+  bottom: 31.6919192%;
+  left: 6.61538462%;
+  right: 6.61538462%;
+}
+.device-mockup.imac > .device {
+  padding-bottom: 80.46663049376018%;
+  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/f_auto/https://swarmpit.io/img/imac.png");
 }
 
 // Sections
