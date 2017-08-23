@@ -6,7 +6,6 @@ website
 
 ```
 nvm use
-npm install -g gulp
 npm install
 ```
 
