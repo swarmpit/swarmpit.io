@@ -1,32 +1,29 @@
 {
-    "name": "Swarmpit",
-    "description": "Lightweight Docker Swarm Management UI",
+    "name": "Swarmpit.io",
+    "description": "Lightweight Docker Swarm Management UI website",
     "repository": {
-        "url": "https://github.com/swarmpit/swarmpit",
-        "license": "EPL",
-        "tests": "https://travis-ci.org/swarmpit/swarmpit/"
+        "url": "https://github.com/swarmpit/swarmpit.io",
+        "license": "MIT",
+        "tests": "https://travis-ci.org/swarmpit/swarmpit.io/"
     },
     "participate": {
         "irc": "irc://irc.gitter.im/#swarmpit_io/swarmpit",
         "irc-contacts": [
-            "lumir-mrkva",
-            "nohaapav",
-            "jirkapenzes",
-            "jinjanko"
+            "rarous"
         ]
     },
     "bugs": {
-        "list": "https://github.com/swarmpit/swarmpit/issues",
-        "report": "https://github.com/swarmpit/swarmpit/issues/new"
+        "list": "https://github.com/swarmpit/swarmpit.io/issues",
+        "report": "https://github.com/swarmpit/swarmpit.io/issues/new"
     },
     "urls": {
-        "prod": "https://swarmpit.io",
-        "demo1": "http://labs.play-with-docker.com/?stack=/swarmpit/swarmpit/latest"
+        "prod": "https://swarmpit.io"
     },
     "keywords": [
-        "clojure",
-        "clojurescript",
-        "docker",
-        "swarm"
+        "bootstrap",
+        "html5",
+        "less",
+        "jquery",
+        "cloudinary"
     ]
 }
