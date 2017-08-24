@@ -100,6 +100,12 @@ img.img-responsive {
   border-color: fade(@gray-darker, 5%);
   .transition-all;
   .heading-font;
+  .navbar-header {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
   .navbar-header .navbar-brand {
     .heading-font;
     color: @theme-primary;
@@ -112,6 +118,18 @@ img.img-responsive {
     font-size: 14px;
     color: @gray-darker;
     padding: 8px 10px;
+  }
+  .navbar-collapse {
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    transform: translateY(-500px);
+    transition: transform .5s;
+    &.in {
+      transform: translateY(0);
+    }
   }
   .nav {
     > li {
