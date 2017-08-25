@@ -101,10 +101,12 @@ img.img-responsive {
   .transition-all;
   .heading-font;
   .navbar-header {
-    background-color: #fff;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
+    @media screen and (max-width: 760px) {
+      background-color: #fff;
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+    }
   }
   .navbar-header .navbar-brand {
     .heading-font;
@@ -120,15 +122,18 @@ img.img-responsive {
     padding: 8px 10px;
   }
   .navbar-collapse {
-    background-color: #fff;
-    display: block;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-    transform: translateY(-500px);
-    transition: transform .5s;
-    &.in {
-      transform: translateY(0);
+
+    @media screen and (max-width: 760px) {
+      background-color: #fff;
+      display: block;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+      transform: translateY(-500px);
+      transition: transform .5s;
+      &.in {
+        transform: translateY(0);
+      }
     }
   }
   .nav {
