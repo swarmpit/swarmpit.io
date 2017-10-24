@@ -13,9 +13,8 @@ cache:
   
 install:
   - npm install -ys --no-progress --depth=0
-  - pip install --index-url=http://pypi.python.org/simple/ --trusted-host
-  - pip install -q --upgrade pip
-  - pip install -q awscli
+  - pip install --index-url=http://pypi.python.org/simple/ --trusted-host pypi.python.org -q --upgrade pip
+  - pip install --index-url=http://pypi.python.org/simple/ --trusted-host pypi.python.org -q awscli
 
 script:
   - npm run build
