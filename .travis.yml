@@ -13,9 +13,7 @@ cache:
   
 install:
   - npm install -ys --no-progress --depth=0
-  - pip install 'requests[security]'
-  - pip install -q --upgrade pip
-  - pip install -q awscli
+  - pip install --user awscli
 
 script:
   - npm run build
