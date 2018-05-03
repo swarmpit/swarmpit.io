@@ -35,3 +35,6 @@ after_deploy:
   - export AWS_DEFAULT_REGION=$AWS_REGION
   - aws configure set preview.cloudfront true
   - aws cloudfront create-invalidation --distribution-id=$AWS_CLOUDFRONT_DISTRIBUTION_ID --paths=/*
+notifications:
+  slack:
+    secure: QWPoByAK/ondphDKM1/9VfKtz7yvuQYCcZf+HlsjAj1MtQ8dFZJ5EcuUb9hcd/aIxfhW0aHwauDV+ZEjyQNSjWOIWN1vAgUVlyMrInPOPHOlyPY03dHfu5hmWzLbQ5oJ3rN4BWEq2lnLRPRHsqMws5ySgGtcx1jp7705MbH1YGNLZHfvNfzEb7bu90NRTxCfCrvq7p+5v04u/MDbouz7bOBPBu8osKa/x4wTDmq93hx/uNuaPObtHcxznWdexcOmm/tt2nNayiI5/w8q0t5vTnpYPfHp6a7PSXj7qvaNlhfde2GCAZIpWGyUKAOlisPpGF0tZMU9npgSMDBnXapPbAysDEz2g9ZM0KYNWjuvRcc0NNVT/x8rEzq6r2niT9iiNvjDAEru6x9j6ZyMoR4/BVf+ezx3oogw2Pwzkwem8nFtt+A6aGUK2V+zH68/JLqLTpcjF0WU4DgbEzwW9HuRcZ95A8K06mlJsStqvPREc2HEB2RHzRpntwc2dN/RIeE+hMdO2E89rz8NqbdSEPKI+07pk46i5NuLzWiPrsA2csEpeGbIcyUoyHZCdxRIsZX5IheQq6e4PLJRaz+sPCY3xzkM9SwHkKyok5hywZ3SociB9/HykSSm244yyU0hj/B6zowkXJDH0WFjre37TX2K4KRl3KffjUjkDPcT+NMYX3M=
