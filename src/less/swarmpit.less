@@ -210,16 +210,16 @@ header {
   position: relative;
   width: 100%;
   overflow-y: hidden;
-  background: @theme-secondary url("https://res.cloudinary.com/swarmpit/image/fetch/q_90,dpr_auto,f_auto,w_1920,c_scale/http://swarmpit.io/img/background.png") center;
+  background: @theme-secondary url("../img/background-3.png") center;
   background-size: cover;
   @media screen and (max-width: 420px) {
-    background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_90,dpr_auto,f_auto,w_420,c_scale/http://swarmpit.io/img/background.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+    background-image: url("../img/background-3.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
   }
   @media screen and (min-width: 421px) and (max-width: 980px) {
-    background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_90,dpr_auto,f_auto,w_980,c_scale/http://swarmpit.io/img/background.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%)
+    background-image: url("../img/background-3.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%)
   }
   @media screen and (min-width: 981px) {
-    background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/q_90,dpr_auto,f_auto,w_1920,c_scale/http://swarmpit.io/img/background.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+    background-image: url("../img/background-3.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
   }
   color: white;
   .header-content {
@@ -246,20 +246,20 @@ header {
   }
   .device-container {
     max-width: 300px;
-    margin: 0 auto 100px;
+    margin: 0 auto 20px;
   }
   @media (min-width: 768px) {
     min-height: 100%;
     .header-content {
-      text-align: left;
+      text-align: center;
       padding: 0;
-      height: 100vh;
+      height: 25vh;
       .header-content-inner {
         max-width: none;
         margin: 0;
-        position: absolute;
+        position: relative;
         top: 50%;
-        transform: translateY(-50%);
+        /*transform: translateY(-50%);*/
         h1 {
           font-size: 25px;
         }
@@ -268,8 +268,8 @@ header {
 
     .device-container {
       max-width: none;
-      max-height: calc(100vh - 100px);
-      margin: 120px auto 0;
+      /*max-height: calc(100vh - 100px);*/
+      margin: 180px auto 0;
     }
   }
   @media (min-width: 992px) {
@@ -298,14 +298,14 @@ header {
   cursor: pointer;
 }
 .device-mockup.imac > .device .screen {
-  top: 8.20707071%;
-  bottom: 31.6919192%;
-  left: 6.61538462%;
-  right: 6.61538462%;
+    top: 7.5%;
+    bottom: 10.9%;
+    left: 12.46%;
+    right: 12.56%
 }
 .device-mockup.imac > .device {
-  padding-bottom: 80.46663049376018%;
-  background-image: url("https://res.cloudinary.com/swarmpit/image/fetch/f_auto,dpr_auto/http://swarmpit.io/img/imac.png");
+  padding-bottom: 57.5%;
+  background-image: url("../img/imac.png");
 }
 
 // Sections
@@ -463,4 +463,30 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: @gray-darker;
+}
+
+@import "w3c.less";
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {
+  cursor:pointer; 
+  color: #004184;
+  /*border-radius: 20px;*/
+  border: 1px solid #ccc;
+  background-color: white;
+  padding-left: 11px;
+  padding-right: 11px; 
+}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.contact-form{ margin-top:15px;}
+.contact-form .textarea{ min-height:220px; resize:none;}
+.form-control{ box-shadow:none; background-color: #f3f3f3; border-color:#eee; height:49px;box-shadow: inset .063rem .063rem .188rem hsla(0,0%,61%,.12);}
+.form-control:focus{ box-shadow:none; border-color:#004184;}
+.form-control-feedback{ line-height:50px;}
+.main-btn{ background:#004184; border-color:#004184; color:#fff;}
+.main-btn:hover{ background:#00a491;color:#fff;}
+.form-control-feedback {
+line-height: 50px;
+top: 0px;
 }
