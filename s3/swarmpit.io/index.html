@@ -282,17 +282,17 @@
                             </div>
                     </div>
                 </div>
-    
+
             </div>
             <!-- /.container -->
-    
+
         </div>
         <!-- /.content-section-a -->
-    
+
         <div class="content-section-b">
-    
+
             <div class="container">
-    
+
                 <div class="row">
                     <div class="col-lg-3 col-lg-offset-2 col-sm-push-6  col-sm-6">
                         <hr class="section-heading-spacer">
@@ -310,13 +310,13 @@
                              alt="screenshot: Private registry" itemprop="image">
                     </div>
                 </div>
-    
+
             </div>
             <!-- /.container -->
-    
+
         </div>
-    
-    
+
+
     <div class="content-section-a">
 
         <div class="container">
@@ -406,7 +406,7 @@
                 <h2 class="section-heading">How to install</h2>
                 <hr>
                 <pre class="install">
-git clone https://github.com/swarmpit/swarmpit -b 1.4
+git clone https://github.com/swarmpit/swarmpit -b 1.5
 docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
                 <hr>
                 <p><a href="https://github.com/swarmpit/swarmpit" class="btn btn-outline btn-xl">View on
@@ -436,7 +436,7 @@ docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
                             <div class="row">
                                 <div class="col-md-6">
                                   <div class="form-group">
-                                    <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name">
+                                    <input type="text" class="form-control" name="name" autocomplete="off" id="Name" placeholder="Name">
                                   </div>
                               </div>
                                 <div class="col-md-6">
@@ -448,7 +448,7 @@ docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
                               <div class="row">
                                   <div class="col-md-12">
                                   <div class="form-group">
-                                    <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
+                                    <textarea class="form-control textarea" rows="3" name="message" id="Message" placeholder="Message"></textarea>
                                   </div>
                               </div>
                             </div>
@@ -458,7 +458,7 @@ docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
                           </div>
                           </div>
                         </form>
-                            
+
             </div>
         </div>
     </div>
@@ -476,7 +476,7 @@ docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
                 </div>
             </div>
         </div>
-    
+
         <div class="container">
             <div class="row">
                 <div class="col-md-12 titleteam">
@@ -486,9 +486,9 @@ docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
                             <h3 class=""><strong>Consultation</strong></h3>
                             <p>To help you with container adoption in dockerized world, please
 do not hesitate to <a href="mailto:team@swarmpit.io"><strong>drop us a message</strong> </a>. We can guide you or even
-design the best fitting solution based on your requirements. 
+design the best fitting solution based on your requirements.
                             </p>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -502,17 +502,17 @@ design the best fitting solution based on your requirements.
                                 <h3 class=""><strong>We can help build the entire infrastructure</strong></h3>
                                 <p>Our Docker journey began with Tutum platform 3 years ago. With
 integration of Swarm mode we realized, that there is no platform
-fullfilling our needs so we started to write Swarmpit. Now we're 
+fullfilling our needs so we started to write Swarmpit. Now we're
 succesfully running Docker on premises, 4 major fintech clusters
 in Azure and finally our internal infrastructure in AWS which was
-moved from Docker Cloud by using Terraform template. We believe 
+moved from Docker Cloud by using Terraform template. We believe
 that this strong Docker experience is going to make your life easier.
                                     </p>
-                                   
+
                             </div>
                         </div>
                     </div>
-            
+
             </div>
         </div>
     </section>
@@ -568,27 +568,27 @@ that this strong Docker experience is going to make your life easier.
                         this.slideIndex += n
                       this.showDivs();
                     }
-                    
+
                     SlideShow.prototype.currentDiv= function (n) {
                         this.slideIndex = n;
                       this.showDivs();
                     }
-                    
+
                     SlideShow.prototype.showDivs = function () {
                         var n = this.slideIndex;
                       if (n > this.slides.length) {
                           this.slideIndex = 1
-                        }    
+                        }
                       if (n < 1) {
                           this.slideIndex = this.slides.length
                         }
                       for (let i = 0; i < this.slides.length; i++) {
-                         this.slides[i].style.display = "none";  
+                         this.slides[i].style.display = "none";
                       }
                       for (let i = 0; i < this.dots.length; i++) {
                          this.dots[i].classList.remove("w3-blue");
                     }
-                      this.slides[this.slideIndex-1].style.display = "block";  
+                      this.slides[this.slideIndex-1].style.display = "block";
                       this.dots[this.slideIndex-1].classList.add("w3-blue");
                       return this;
                     }
@@ -598,6 +598,6 @@ that this strong Docker experience is going to make your life easier.
                     var slideshow3 = new SlideShow(document.querySelector(".slides3")).showDivs()
                     </script>
             <script src="js/swarmpit.min.js" defer></script>
-            
+
 </body>
 </html>
