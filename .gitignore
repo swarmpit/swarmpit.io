@@ -9,3 +9,4 @@ s3/swarmpit.io/lib/simple-line-icons/
 *.log
 
 src/css/swarmpit.css
+.DS_Store

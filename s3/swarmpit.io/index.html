@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title itemprop="name">Swarmpit</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width">
     <meta name="author" content="&copy; TopMonks, s.r.o.">
     <link rel="canonical" href="https://swarmpit.io/">
@@ -104,7 +104,10 @@
                     <a href="https://www.github.com/swarmpit/swarmpit">GitHub</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#team">About</a>
+                    <a class="page-scroll" href="#offer">We offer</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#form">Contact</a>
                 </li>
             </ul>
         </div>
@@ -116,7 +119,7 @@
 <header>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-12">
                 <script async defer src="https://buttons.github.io/buttons.js"></script>
                 <div class="header-content">
                     <div class="header-content-inner">
@@ -127,22 +130,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-'10">
                 <div class="device-container">
                     <div class="device-mockup imac">
                         <div class="device">
                             <div class="screen">
                                 <video autoplay loop muted
                                        style="width: 100%"
-                                       poster="https://res.cloudinary.com/swarmpit/image/fetch/w_1070,h_602,c_scale,f_jpg/http://swarmpit.io/img/v1.0/demo-screen-1.gif">
+                                       poster="./img/v1.5/demo-screen-1.gif">
                                     <source type="video/mp4"
-                                            src="https://res.cloudinary.com/swarmpit/image/fetch/w_1070,h_602,c_scale,f_mp4/http://swarmpit.io/img/v1.0/demo-screen-1.gif">
+                                            src="./img/v1.5/demo-screen-1.gif">
                                     <source type="video/webm" media="screen and (max-width: 768px)"
-                                            src="https://res.cloudinary.com/swarmpit/image/fetch/w_520,h_292,c_scale,f_webm/http://swarmpit.io/img/v1.0/demo-screen-1.gif">
+                                            src="./img/v1.5/demo-screen-1.gif">
                                     <source type="video/webm" media="screen and (min-width: 769px)"
-                                            src="https://res.cloudinary.com/swarmpit/image/fetch/w_1070,h_602,c_scale,f_webm/http://swarmpit.io/img/v1.0/demo-screen-1.gif">
+                                            src="./img/v1.5/demo-screen-1.gif">
                                     Your browser does not support HTML5 video tag.
-                                    <a href="/img/v1.0/demo-screen-1.gif">Click here to view original GIF</a>
+                                    <a href="/img/v1.5/demo-screen-1.gif">Click here to view original GIF</a>
                                 </video>
                             </div>
                             <div class="button">
@@ -157,7 +160,7 @@
 </header>
 
 <section id="nopadding" class="nopadding">
-    <div class="content-section-a">
+    <div class="content-section">
 
         <div class="container">
             <div class="row">
@@ -178,16 +181,28 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <div class="feature-item">
-                        <i class="icon-settings text-primary"></i>
-                        <h2>Service management</h2>
-                        <p class="text-muted">Deploy and manage your services</p><br>
+                        <i class="icon-grid text-primary"></i>
+                        <div class="ribbon"><span>NEW</span></div>
+                        <h2>Stack management</h2>
+                        <p class="text-muted">Compose new stack manually or let Swarmpit generate one from application state. It’s never been easier</p><br>
                     </div>
                 </div>
-                <div class="col-lg-7 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive"
-                         sizes="(max-width: 770px) 100vw, (min-width: 771px) 50vw"
-                         src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_90,dpr_auto,w_auto:100/http://swarmpit.io/img/v1.0/example.jpg"
-                         alt="screenshot: Service management" itemprop="image">
+                <div class="col-lg-7 col-lg-offset-2 col-sm-6 w3-margin-bottom">
+                    <div class="slides1 w3-content w3-display-container" style="max-width:800px">
+                        <img class="mySlides" src="./img/v1.5/example1-1.jpg" style="width:100%">
+                        <img class="mySlides" src="./img/v1.5/example1-2.jpg" style="width:100%">
+                        <img class="mySlides" src="./img/v1.5/example1-3.jpg" style="width:100%">
+                        <img class="mySlides" src="./img/v1.5/example1-4.jpg" style="width:100%">
+                        <div class="w3-center w3-container w3-section w3-large w3-display-middle" style="width:100%">
+                          <div class="w3-left w3-hover-text-khaki" onclick="slideshow1.plusDivs(-1)">&#10094;</div>
+                          <div class="w3-right w3-hover-text-khaki" onclick="slideshow1.plusDivs(1)">&#10095;</div>
+                        </div>
+                        <div class="w3-center w3-container w3-section w3-large w3-display-bottommiddle" style="width:100%">
+                          <span class="w3-badge demo w3-border w3-transparent w3-hover-deep-purple" onclick="slideshow1.currentDiv(1)"></span>
+                          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="slideshow1.currentDiv(2)"></span>
+                          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="slideshow1.currentDiv(3)"></span>
+                          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="slideshow1.currentDiv(4)"></span>
+                      </div>
                 </div>
             </div>
 
@@ -206,17 +221,28 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <div class="feature-item">
-                        <i class="icon-magnifier-add text-primary"></i>
-                        <h2>Smart search</h2>
-                        <p class="text-muted">Search for images accross public and private registries</p><br>
+                        <i class="icon-screen-desktop text-primary"></i>
+                        <div class="ribbon2"><span>NEW</span></div>
+                        <h2>Resource monitoring</h2>
+                        <p class="text-muted">Handy overview of cluster nodes statistics such as cpu, memory and disk usage followed by task resource monitoring</p><br>
                     </div>
                 </div>
-                <div class="col-lg-7 col-sm-pull-5  col-sm-6">
-                    <img class="img-responsive"
-                         sizes="(max-width: 770px) 100vw, (min-width: 771px) 50vw"
-                         src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_90,dpr_auto,w_auto:100/http://swarmpit.io/img/v1.0/example2.jpg"
-                         alt="screenshot: Smart search" itemprop="image">
-                </div>
+                <div class="col-lg-7 col-sm-pull-5  col-sm-6 w3-margin-bottom">
+                        <div class="slides3 w3-content w3-display-container" style="max-width:800px">
+                                <img class="mySlides" src="./img/v1.5/example2-1.jpg" style="width:100%">
+                                <img class="mySlides" src="./img/v1.5/example2-2.jpg" style="width:100%">
+                                <img class="mySlides" src="./img/v1.5/example2-3.jpg" style="width:100%">
+                                <div class="w3-center w3-container w3-section w3-large w3-display-middle" style="width:100%">
+                                  <div class="w3-left w3-hover-text-khaki" onclick="slideshow3.plusDivs(-1)">&#10094;</div>
+                                  <div class="w3-right w3-hover-text-khaki" onclick="slideshow3.plusDivs(1)">&#10095;</div>
+                                </div>
+                                <div class="w3-center w3-container w3-section w3-large w3-display-bottommiddle" style="width:100%">
+                                  <span class="w3-badge demo w3-border w3-transparent w3-hover-deep-purple" onclick="slideshow3.currentDiv(1)"></span>
+                                  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="slideshow3.currentDiv(2)"></span>
+                                  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="slideshow3.currentDiv(3)"></span>
+                              </div>
+                        </div>
+                    </div>
             </div>
 
         </div>
@@ -224,6 +250,71 @@
 
     </div>
 
+    <div class="content-section-a">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <div class="feature-item">
+                            <i class="icon-settings text-primary"></i>
+                            <h2>Service management</h2>
+                            <p class="text-muted">Deploy and manage your services</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-lg-offset-2 col-sm-6 w3-margin-bottom">
+                            <div class="slides2 w3-content w3-display-container" style="max-width:800px">
+                                    <img class="mySlides" src="./img/v1.5/example3-1.jpg" style="width:100%">
+                                    <img class="mySlides" src="./img/v1.5/example3-2.jpg" style="width:100%">
+                                    <img class="mySlides" src="./img/v1.5/example3-3.jpg" style="width:100%">
+                                    <div class="w3-center w3-container w3-section w3-large w3-display-middle" style="width:100%">
+                                      <div class="w3-left w3-hover-text-khaki" onclick="slideshow2.plusDivs(-1)">&#10094;</div>
+                                      <div class="w3-right w3-hover-text-khaki" onclick="slideshow2.plusDivs(1)">&#10095;</div>
+                                    </div>
+                                    <div class="w3-center w3-container w3-section w3-large w3-display-bottommiddle" style="width:100%">
+                                      <span class="w3-badge demo w3-border w3-transparent w3-hover-deep-purple" onclick="slideshow2.currentDiv(1)"></span>
+                                      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="slideshow2.currentDiv(2)"></span>
+                                      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="slideshow2.currentDiv(3)"></span>
+                                  </div>
+                            </div>
+                    </div>
+                </div>
+    
+            </div>
+            <!-- /.container -->
+    
+        </div>
+        <!-- /.content-section-a -->
+    
+        <div class="content-section-b">
+    
+            <div class="container">
+    
+                <div class="row">
+                    <div class="col-lg-3 col-lg-offset-2 col-sm-push-6  col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <div class="feature-item">
+                            <i class="icon-magnifier-add text-primary"></i>
+                            <h2>Smart search</h2>
+                            <p class="text-muted">Search for images accross public and private registries</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-sm-pull-5  col-sm-6">
+                        <img class="img-responsive"
+                             sizes="(max-width: 770px) 100vw, (min-width: 771px) 50vw"
+                             src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_90,dpr_auto,w_auto:100/http://swarmpit.io/img/v1.0/example2.jpg"
+                             alt="screenshot: Private registry" itemprop="image">
+                    </div>
+                </div>
+    
+            </div>
+            <!-- /.container -->
+    
+        </div>
+    
+    
     <div class="content-section-a">
 
         <div class="container">
@@ -240,7 +331,7 @@
                 <div class="col-lg-7 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive"
                          sizes="(max-width: 770px) 100vw, (min-width: 771px) 50vw"
-                         src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_90,dpr_auto,w_auto:100/http://swarmpit.io/img/v1.0/example3.jpg"
+                         src="./img/v1.5/example4-1.jpg"
                          alt="screenshot: Shared access" itemprop="image">
                 </div>
             </div>
@@ -268,7 +359,7 @@
                 <div class="col-lg-7 col-sm-pull-5  col-sm-6">
                     <img class="img-responsive"
                          sizes="(max-width: 770px) 100vw, (min-width: 771px) 50vw"
-                         src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_90,dpr_auto,w_auto:100/http://swarmpit.io/img/v1.0/example4.jpg"
+                         src="./img/v1.5/example5-1.jpg"
                          alt="screenshot: Private registry" itemprop="image">
                 </div>
             </div>
@@ -313,7 +404,7 @@
                 <h2 class="section-heading">How to install</h2>
                 <hr>
                 <pre class="install">
-git clone https://github.com/swarmpit/swarmpit -b 1.5
+git clone https://github.com/swarmpit/swarmpit -b 1.4
 docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
                 <hr>
                 <p><a href="https://github.com/swarmpit/swarmpit" class="btn btn-outline btn-xl">View on
@@ -323,21 +414,13 @@ docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
     </div>
 </section>
 
-<!--<section id="tutorial" class="tutorial">
-    <div class="container">
-        <h2>Video tutorial</h2>
-         <div class="col-sm-12">
-         <iframe width="100%" height="551" src="https://www.youtube.com/embed/_0dXZGXVM24" frameborder="0" allowfullscreen></iframe>
-    </div>
-</section>-->
-
-<section id="team">
+<section id="form">
 
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="section-heading">
-                    <h2 class="titleteam">Team swarmpit</h2>
+                    <h2 class="">Contact</h2>
                     <hr class="line">
                 </div>
             </div>
@@ -346,131 +429,123 @@ docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-2 col-md-offset-1 titleteam">
-                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <img src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_auto/http://swarmpit.io/img/lumir-mrkva-s.jpg"
-                         alt="photo: Lumír Mrkva" class="avatar" itemprop="image">
-                    <div class="title">
-                        <h5 class="name" itemprop="name">Lumír Mrkva</h5>
-                        <p><a href="https://twitter.com/mrq1911" title="Lumír Mrkva's Twitter profile"
-                              itemprop="sameAs"><i
-                                class="icon-social-twitter"></i></a>&nbsp;&nbsp;
-                            <a href="https://github.com/lumir-mrkva" title="Lumír Mrkva' Github profile"
-                               itemprop="sameAs"><i
-                                    class="icon-social-github"></i></a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-2 titleteam">
-                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <img src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_auto/http://swarmpit.io/img/jiri-penzes-s.jpg"
-                         alt="photo: Jirka Pénzeš" class="avatar" itemprop="image">
-                    <div class="title">
-                        <h5 class="name" itemprop="name">Jirka Pénzeš</h5>
-                        <p><a href="https://twitter.com/jirkapenzes" title="Jirka Pénzeš's Twitter profile"
-                              itemprop="sameAs"><i
-                                class="icon-social-twitter"></i></a>&nbsp;&nbsp;
-                            <a href="https://github.com/jirkapenzes" title="Jirka Pénzeš's Github profile"
-                               itemprop="sameAs"><i
-                                    class="icon-social-github"></i></a>&nbsp;&nbsp;
-                            <a href="https://cz.linkedin.com/in/jirkapenzes" title="Jirka Pénzeš's LinkedIn profile"
-                               itemprop="sameAs"><i
-                                    class="icon-social-linkedin"></i></a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-2 titleteam">
-                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <img src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_auto/http://swarmpit.io/img/pavol-noha-s.jpg"
-                         alt="photo: Pavol Noha" class="avatar" itemprop="image">
-                    <div class="title">
-                        <h5 class="name" itemprop="name">Pavol Noha</h5>
-                        <p><a href="https://twitter.com/nohaapav" title="Pavol Noha's Twitter profile"
-                              itemprop="sameAs"><i
-                                class="icon-social-twitter"></i></a>&nbsp;&nbsp;
-                            <a href="https://github.com/nohaapav" title="Pavol Noha's Github profile" itemprop="sameAs"><i
-                                    class="icon-social-github"></i></a>&nbsp;&nbsp;
-                            <a href="https://cz.linkedin.com/in/pavol-noha-0220184a"
-                               title="Pavol Noha's LinedIn profile" itemprop="sameAs"><i
-                                    class="icon-social-linkedin"></i></a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-2 titleteam">
-                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <img src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_auto/http://swarmpit.io/img/pavel-trnka-s.jpg"
-                         alt="photo: Pavel Trnka" class="avatar" itemprop="image">
-                    <div class="title">
-                        <h5 class="name" itemprop="name">Pavel Trnka</h5>
-                        <p><a href="https://twitter.com/fromen" title="Pavel Trnka's Twitter profile" itemprop="sameAs"><i
-                                class="icon-social-twitter"></i></a>&nbsp;&nbsp;
-                            <a href="https://cz.pinterest.com/fromen/" title="Pavel Trnka's Pinterest profile"
-                               itemprop="sameAs"><i
-                                    class="icon-social-pinterest"></i></a>&nbsp;&nbsp;
-                            <a href="https://www.linkedin.com/in/pavel-trnka-a2045b76/n"
-                               title="Pavel Trnka's LinkedIn profile" itemprop="sameAs"><i
-                                    class="icon-social-linkedin"></i></a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-2 titleteam">
-                <div class="team padd text-center" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    <img src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_auto/http://swarmpit.io/img/janjanko-s.jpg"
-                         alt="photo: Jan Lopusek" class="avatar" itemprop="image">
-                    <div class="title">
-                        <h5 class="name" itemprop="name">Jan Lopusek</h5>
-                        <p><a href="https://cz.linkedin.com/in/jan-lopusek-9390a51a"
-                              title="Jan Lopusek's LinkedIn profile" itemprop="sameAs"><i
-                                class="icon-social-linkedin"></i></a></p>
-                    </div>
-                </div>
+            <div class="col-lg-12 text-center">
+                    <form role="form" id="contact-form" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="Name">
+                                  </div>
+                              </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail">
+                                  </div>
+                              </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-12">
+                                  <div class="form-group">
+                                    <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="Message"></textarea>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-md-12">
+                          <button type="submit" class="btn btn-primary btn-xl">Send a message</button>
+                          </div>
+                          </div>
+                        </form>
+                            
             </div>
         </div>
     </div>
 </section>
 
-<div class="subscribe">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <div class="section-heading">
-                    <h2 class="title">Keep in touch</h2>
-                    <p>Guys, count me in. I would love to be informed about the full release.</p>
+<section id="offer" class="">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2 class="titleteam">What we offer</h2>
+                        <hr class="line">
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- SUBSCRIBE FORM START -->
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <div class="email-wrapper">
-                    <form id="postcontentsb" action="https://fokgz5bqh2.execute-api.eu-central-1.amazonaws.com/swarmpit/mailing-list" method="post" enctype="application/x-www-form-urlencoded">
-                        <label for="email" class="sr-only visible-print">E-mail:</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
-                        <button type="submit" class="btn btn-primary btn-xl">Send</button>
-                    </form>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 titleteam">
+                    <div class="team padd text-center">
+                        <div class="title">
+                            <img src="./img/v1.5/ikona1.svg">
+                            <h3 class=""><strong>Consultation</strong></h3>
+                            <p>To help you with container adoption in dockerized world, please
+do not hesitate to <a href="mailto:team@swarmpit.io"><strong>drop us a message</strong> </a>. We can guide you or even
+design the best fitting solution based on your requirements. 
+                            </p>
+                            
+                        </div>
+                    </div>
                 </div>
-                <br>
+
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-12 titleteam">
+                        <div class="team padd text-center">
+                            <div class="title">
+                                 <img src="./img/v1.5/ikona2.svg">
+                                <h3 class=""><strong>We can help build the entire infrastructure</strong></h3>
+                                <p>Our Docker journey began with Tutum platform 3 years ago. With
+integration of Swarm mode we realized, that there is no platform
+fullfilling our needs so we started to write Swarmpit. Now we're 
+succesfully running Docker on premises, 4 major fintech clusters
+in Azure and finally our internal infrastructure in AWS which was
+moved from Docker Cloud by using Terraform template. We believe 
+that this strong Docker experience is going to make your life easier.
+                                    </p>
+                                   
+                            </div>
+                        </div>
+                    </div>
+            
             </div>
         </div>
-    </div>
-</div>
-<!-- SUBSCRIBE FORM END -->
+    </section>
 
 <footer>
     <div class="container">
-        <p>&copy; 2017 TopMonks, s.r.o.</p>
+    <div class="row">
+    <div class="col-md-6 titleteam">
+    <i class="icon-speech text-primary"></i>
+    <div class="text-center links"><a href="https://gitter.im/swarmpit_io">gitter.im/swarmpit_io</a>
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 titleteam">
+    <i class="icon-envelope-open text-primary"></i>
+    <div class="text-center links"><a href="mailto:team@swarmpit.io">team@swarmpit.io</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="container">
+    <a href="https://www.topmonks.com"><img src="./img/topmonks-logo.svg"></a>
+        <p>Powered by<br>&copy; 2018 </p>
         <ul class="list-inline">
             <li><a class="page-scroll" href="#page-top">Top</a></li>
             <li><a class="page-scroll" href="#download">Install</a></li>
             <li><a class="page-scroll" href="#nopadding">Features</a></li>
-            <li><a class="page-scroll" href="#team">Team</a></li>
+            <li><a class="page-scroll" href="#offer">We offer</a></li>
+            <li><a class="page-scroll" href="#form">Contact</a></li>
         </ul>
     </div>
 </footer>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" integrity="sha256-7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV/8erfDQz/Q=" crossorigin="anonymous" />
 <!--[if lt IE 9]>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" defer></script>
@@ -478,8 +553,49 @@ docker stack deploy -c swarmpit/docker-compose.yml swarmpit</pre>
 <!--[if gte IE 9]><!-->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" defer
         integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
-        crossorigin="anonymous"></script>
-<!--<![endif]-->
-<script src="js/swarmpit.min.js" defer></script>
+        crossorigin="anonymous"></script><!--<![endif]-->
+
+            <script>
+                    function SlideShow(parentElement)
+                    {
+                        this.slideIndex = 1;
+                      this.slides = parentElement.querySelectorAll(".mySlides")// document.getElementsByClassName(slides);
+                      this.dots = parentElement.querySelectorAll(".demo") //document.getElementsByClassName(dots);
+                    }
+                    SlideShow.prototype.plusDivs = function (n) {
+                        this.slideIndex += n
+                      this.showDivs();
+                    }
+                    
+                    SlideShow.prototype.currentDiv= function (n) {
+                        this.slideIndex = n;
+                      this.showDivs();
+                    }
+                    
+                    SlideShow.prototype.showDivs = function () {
+                        var n = this.slideIndex;
+                      if (n > this.slides.length) {
+                          this.slideIndex = 1
+                        }    
+                      if (n < 1) {
+                          this.slideIndex = this.slides.length
+                        }
+                      for (let i = 0; i < this.slides.length; i++) {
+                         this.slides[i].style.display = "none";  
+                      }
+                      for (let i = 0; i < this.dots.length; i++) {
+                         this.dots[i].classList.remove("w3-blue");
+                    }
+                      this.slides[this.slideIndex-1].style.display = "block";  
+                      this.dots[this.slideIndex-1].classList.add("w3-blue");
+                      return this;
+                    }
+
+                    var slideshow1 = new SlideShow(document.querySelector(".slides1")).showDivs()
+                    var slideshow2 = new SlideShow(document.querySelector(".slides2")).showDivs()
+                    var slideshow3 = new SlideShow(document.querySelector(".slides3")).showDivs()
+                    </script>
+            <script src="js/swarmpit.min.js" defer></script>
+            
 </body>
 </html>
