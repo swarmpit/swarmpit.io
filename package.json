@@ -11,7 +11,7 @@
     "url": "https://github.com/swarmpit/swarmpit.io/issues"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.1.2",
     "jquery.easing": "^1.4.1"
   },
   "devDependencies": {
