@@ -22,7 +22,7 @@ gulp.task('less', function () {
 });
 
 // Minify compiled CSS
-gulp.task('minify-css', ['less'], function () {
+gulp.task('minify-css', gulp.series('less'), function () {
     const plugins = [
         autoprefixer({
             browsers: ["> 5%", "last 4 versions", "IE 8"],
@@ -81,7 +81,7 @@ gulp.task('minify-html', function () {
 });
 
 // Run everything
-gulp.task('prod', ['minify-html', 'minify-css', 'minify-js']);
+gulp.task('prod', gulp.parallel('minify-html', 'minify-css', 'minify-js'));
 
 // Configure the browserSync task
 gulp.task('browserSync', function () {
@@ -93,7 +93,7 @@ gulp.task('browserSync', function () {
 });
 
 // Dev task with browserSync
-gulp.task('watch', ['minify-css', 'minify-js'], function () {
+gulp.task('watch', gulp.parallel('minify-css', 'minify-js'), function () {
     gulp.watch('src/less/*.less', ['less']);
     gulp.watch('src/css/*.css', ['minify-css']);
     gulp.watch('src/js/*.js', ['minify-js']);
@@ -102,4 +102,4 @@ gulp.task('watch', ['minify-css', 'minify-js'], function () {
     gulp.watch('s3/swarmpit.io/js/**/*.js', browserSync.reload);
 });
 
-gulp.task('default', ['watch', 'browserSync']);
+gulp.task('default', gulp.parallel('watch', 'browserSync'));

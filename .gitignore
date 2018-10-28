@@ -10,3 +10,4 @@ s3/swarmpit.io/lib/simple-line-icons/
 
 src/css/swarmpit.css
 .DS_Store
+package-lock.json
