@@ -15,7 +15,7 @@
     "jquery.easing": "^1.4.1"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^9.4.0",
     "browser-sync": "^2.18.13",
     "cssnano": "^3.10.0",
     "gulp": "^4.0.0",
