@@ -5,18 +5,19 @@ sudo: false
 git:
   depth: 10
   lfs_skip_smudge: true
-  
+
 cache:
   pip: true
+  yarn: true
   directories:
     - node_modules
-  
+
 install:
-  - npm install -ys --no-progress --depth=0
+  - yarn
   - pip install --user awscli
 
 script:
-  - npm run build
+  - yarn build
 
 deploy:
   provider: s3
