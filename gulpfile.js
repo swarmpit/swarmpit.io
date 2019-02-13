@@ -35,6 +35,7 @@ function scripts() {
   return src([
     "node_modules/jquery.easing/jquery.easing.js",
     "node_modules/bootstrap/js/affix.js",
+    "node_modules/bootstrap/js/tab.js",
     "node_modules/bootstrap/js/collapse.js",
     "src/js/swarmpit.js"
   ])

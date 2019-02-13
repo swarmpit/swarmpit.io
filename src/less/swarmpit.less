@@ -210,16 +210,16 @@ header {
   position: relative;
   width: 100%;
   overflow-y: hidden;
-  background: @theme-secondary url("../img/background-3.png") center;
+  background: @theme-secondary url("../img/background-3.jpg") center;
   background-size: cover;
   @media screen and (max-width: 420px) {
-    background-image: url("../img/background-3.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+    background-image: url("../img/background-3.jpg"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
   }
   @media screen and (min-width: 421px) and (max-width: 980px) {
-    background-image: url("../img/background-3.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%)
+    background-image: url("../img/background-3.jpg"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%)
   }
   @media screen and (min-width: 981px) {
-    background-image: url("../img/background-3.png"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
+    background-image: url("../img/background-3.jpg"), linear-gradient(315deg, @theme-primary, @theme-secondary 50%);
   }
   color: white;
   .header-content {
@@ -359,7 +359,7 @@ section.tutorial {
 }
 
 footer {
-  background-color: @gray-darker2;
+  background-color: @theme-secondary;
   padding: 25px 0;
   color: fade(white, 30%);
   text-align: center;
@@ -435,10 +435,16 @@ footer {
   /*border-radius: 300px;*/
 }
 
+.btn-primary {
+  background-color: @theme-green;
+  border: 0px;
+}
+
 .btn-xl {
   z-index: 99;
-  padding: 15px 45px;
-  font-size: 11px;
+  padding: 20px 65px;
+  font-size: 14px;
+  margin-top: 10px 
 }
 
 // Extras
@@ -468,20 +474,6 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: @gray-darker;
 }
-
-@import "w3c.less";
-
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {
-  cursor:pointer; 
-  color: #004184;
-  /*border-radius: 20px;*/
-  border: 1px solid #ccc;
-  background-color: white;
-  padding-left: 11px;
-  padding-right: 11px; 
-}
-.w3-badge {height:13px;width:13px;padding:0}
 
 .contact-form{ margin-top:15px;}
 .contact-form .textarea{ min-height:220px; resize:none;}

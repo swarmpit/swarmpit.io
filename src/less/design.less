@@ -29,10 +29,7 @@
 }
 
 #offer {
-  color: white;
-  /*background: url("../img/v1.5/bg.png");*/
-  background-size: cover;
-  background-color: #584390;
+  background-color: #fff;
 }
 
 .email-wrapper .form-control {
@@ -80,11 +77,22 @@ section.nopadding {
       font-size: 30px;
     }
     i {
-      font-size: 80px;
+      font-size: 40px;
+      line-height: 2;
       background: -webkit-linear-gradient(to left, @theme-secondary, @theme-tertiary);
       background: linear-gradient(to left, @theme-secondary, @theme-tertiary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
+      border-radius: 20px;
+      padding: 20px;
+    }
+    w {
+      font-size: 40px;
+      line-height: 2;
+      background: #fff;
+      box-shadow: #e3e1e1 4px 6px 20px; 
+      color: @theme-secondary;
+      border-radius: 20px;
+      padding: 20px;
     }
   }
   @media (min-width: 992px) {
@@ -104,11 +112,12 @@ section.nopadding {
   margin: 30px 0;
   padding-bottom: 10px;
   background: white;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
   color: #333;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 30px;
+  height: 650px;
 }
 
 .team .avatar {
@@ -136,4 +145,56 @@ font-size: 30px;
 
 .links  {
 padding-bottom: 20px;
+}
+
+a.black:before {
+    background-color: #333;
+}
+
+.form-control-feedback {
+  line-height: 50px;
+  top: 0px;
+}
+#form {
+  background-color: @theme-secondary;
+  color: #fff;
+}
+.text-white {
+  color: #fff;
+}
+footer .feature-item i {
+  font-size: 30px;
+  line-height: 2;
+  background: #fff;
+  color: #C14499;
+  border-radius: 10px;
+  padding: 10px;
+}
+.btn-outline-gray {
+  color: #999;
+  border-color: #999;
+  border: 1px solid;
+  z-index: 99;
+}
+
+@media screen and (max-width: 1420px) {
+  .github-fork-ribbon {
+    display: none;
+  }
+}
+
+.tabs {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 0 1em;
+  li+li {
+    margin-left: 1em;
+  }
+
+}
+
+.tab--hidden {
+  display: none
 }
