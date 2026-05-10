@@ -18,7 +18,7 @@
   "scripts": {
     "start": "serve s3/swarmpit.io -l 3000",
     "dev": "serve s3/swarmpit.io -l 3000",
-    "build": "echo 'no build step — site is static; deploy s3/swarmpit.io/ as-is'"
+    "build": "echo 'no build step — site is static; deploy s3/swarmpit-io/ as-is'"
   },
   "devDependencies": {
     "serve": "^14.2.4"
