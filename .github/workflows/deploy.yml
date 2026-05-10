@@ -58,7 +58,7 @@ jobs:
 
       - name: Sync to S3
         run: |
-          aws s3 sync s3://swarmpit-io s3://swarmpit-io/ \
+          aws s3 sync s3/swarmpit.io/ s3://swarmpit-io/ \
             --delete \
             --exclude ".DS_Store" \
             --cache-control "public, max-age=3600"
