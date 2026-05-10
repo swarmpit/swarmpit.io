@@ -1,18 +1,22 @@
 {
-    "name": "swarmpit.io",
+    "name": "Swarmpit",
+    "short_name": "Swarmpit",
+    "description": "Lightweight AI-friendly Docker Swarm management",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "theme_color": "#65519f",
+    "background_color": "#0a0a12",
     "icons": [
         {
-            "src": "/img/android-chrome-192x192.png",
+            "src": "/icon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/img/android-chrome-384x384.png",
-            "sizes": "384x384",
+            "src": "/icon/android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    ]
 }

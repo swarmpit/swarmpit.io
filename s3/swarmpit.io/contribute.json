@@ -3,8 +3,8 @@
     "description": "Lightweight Docker Swarm Management UI website",
     "repository": {
         "url": "https://github.com/swarmpit/swarmpit.io",
-        "license": "MIT",
-        "tests": "https://travis-ci.org/swarmpit/swarmpit.io/"
+        "license": "EPL-1.0",
+        "tests": "https://github.com/swarmpit/swarmpit.io/actions"
     },
     "participate": {
         "irc": "irc://irc.gitter.im/#swarmpit_io/swarmpit",
@@ -20,10 +20,10 @@
         "prod": "https://swarmpit.io"
     },
     "keywords": [
-        "bootstrap",
         "html5",
-        "less",
-        "jquery",
-        "cloudinary"
+        "css3",
+        "vanilla-js",
+        "static",
+        "pnpm"
     ]
 }

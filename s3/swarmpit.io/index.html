@@ -1,404 +1,256 @@
 <!DOCTYPE html>
-<html lang=en prefix="og: http://ogp.me/ns#" itemscope itemtype=https://schema.org/SoftwareApplication>
-<meta charset=utf-8>
-<title itemprop=name>Swarmpit</title>
-<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
-<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta http-equiv=Accept-CH content=DPR,Viewport-Width,Width>
-<meta name=author content="© TopMonks, s.r.o.">
-<link rel=canonical href=https://swarmpit.io/ >
-<meta property=og:type content=product>
-<meta name=twitter:card content=summary_large_image>
-<meta name=twitter:site content=@swarmpit_io>
-<meta name=description property=og:description content="Lightweight Docker Swarm Management UI">
-<meta name=twitter:description content="Lightweight Docker Swarm Management UI">
-<meta property=og:url content=https://swarmpit.io>
-<meta name=twitter:title property=og:title content=Swarmpit>
-<meta name=twitter:image property=og:image content=https://swarmpit.io/img/background.jpg>
-<link rel=preconnect href=https://ajax.googleapis.com>
-<link rel=preconnect href=https://fonts.googleapis.com>
-<link rel=preconnect href=https://www.google-analytics.com>
-<link rel=preconnect href=https://code.jquery.com>
-<link rel=preconnect href=https://cdnjs.cloudflare.com>
-<link rel=manifest href=/manifest.json>
-<link rel=apple-touch-icon type=image/png sizes=180x180 href=/img/apple-touch-icon.png>
-<link rel=icon type=image/png sizes=32x32 href=/img/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/img/favicon-16x16.png>
-<link rel=mask-icon href=/img/safari-pinned-tab.svg color=#5bbad5>
-<link rel="shortcut icon" href=/favicon.ico>
-<meta name=apple-mobile-web-app-title content=swarmpit.io>
-<meta name=application-name content=swarmpit.io>
-<meta name=msapplication-config content=/browserconfig.xml>
-<meta name=theme-color content=#ffffff>
-<script>WebFontConfig = { google: { families: ["Lato:300,400,600,700:latin-ext"] }, async: !0 };</script>
-<script src=https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js async defer
-        integrity=sha384-pvXSwSU09c+q9mPyY++ygUHWIYRoaxgnJ/JC5wcOzMb/NVVu+IDniiB9qWp3ZNWM
-        crossorigin=anonymous></script>
-<link href=css/swarmpit.min.css rel=stylesheet>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css" />
-<script>!function(e, a, t, n, g, s, c) {
-  e.GoogleAnalyticsObject = g, e.ga = e.ga || function() {
-    (e.ga.q = e.ga.q || []).push(arguments);
-  }, e.ga.l = 1 * new Date, s = a.createElement(t), c = a.getElementsByTagName(t)[0], s.async = 1, s.src = "https://www.google-analytics.com/analytics.js", c.parentNode.insertBefore(s, c);
-}(window, document, "script", 0, "ga"), ga("create", "UA-101371145-1", "auto"), ga("require", "displayfeatures"), ga("send", "pageview");</script>
-<script>!function(t, h, e, j, s, n) {
-  t.hj = t.hj || function() {
-    (t.hj.q = t.hj.q || []).push(arguments);
-  }, t._hjSettings = {
-    hjid: 541445,
-    hjsv: 5
-  }, s = h.getElementsByTagName("head")[0], (n = h.createElement("script")).async = 1, n.src = "https://static.hotjar.com/c/hotjar-" + t._hjSettings.hjid + ".js?sv=" + t._hjSettings.hjsv, s.appendChild(n);
-}(window, document);</script>
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-<body id=page-top>
-    <a class="github-fork-ribbon black fixed" href="https://github.com/swarmpit/swarmpit" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> MENU ☰
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo-swarmpit.svg" width="135" height="25" alt="Swarmpit!"></a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#features">Features</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#download">Install</a>
-                </li> 
-                <li>
-                    <a class="page-scroll" href="#offer">We offer</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#form">Contact</a>
-                </li>
-                <li>
-                    <a href="https://www.github.com/swarmpit/swarmpit">GitHub</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <script async defer src="https://buttons.github.io/buttons.js"></script>
-                <div class="header-content">
-                    <div class="header-content-inner">
-                        <h1><strong>Swarmpit</strong><br><span itemprop="description">Operate your docker infrastructure like a champ.</span></h1>
-                        <p><a class="github-button" href="https://github.com/swarmpit/swarmpit" data-size="large"
-                              data-show-count="true" aria-label="Star swarmpit/swarmpit on GitHub">Star</a></p>
-                              <a class="page-scroll btn btn-primary btn-xl" href="#download">Install</a>
+<html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="https://schema.org/SoftwareApplication">
+<head>
+<meta charset="utf-8">
+<title itemprop="name">Swarmpit — Lightweight AI-friendly Docker Swarm management</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="author" content="© Swarmpit">
+<meta name="description" property="og:description" content="Lightweight AI-friendly Docker Swarm management">
+<meta name="twitter:description" content="Lightweight AI-friendly Docker Swarm management">
+<meta property="og:type" content="product">
+<meta property="og:url" content="https://swarmpit.io">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@swarmpit_io">
+<meta name="twitter:title" property="og:title" content="Swarmpit">
+<meta name="twitter:image" property="og:image" content="https://swarmpit.io/img/background.jpg">
+<link rel="canonical" href="https://swarmpit.io/">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/icon/android-chrome-512x512.png">
+<link rel="mask-icon" href="/icon/safari-pinned-tab.svg" color="#65519f">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="swarmpit.io">
+<meta name="application-name" content="swarmpit.io">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="theme-color" content="#0a0a12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/swarmpit.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="device-container">
-                    <div class="device-mockup imac">
-                        <div class="device">
-                            <div class="screen">
-                            </div>
-                            <div class="button">
-                                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<header class="site-header" id="page-top">
+  <nav class="nav container" aria-label="Primary">
+    <a class="brand" href="#page-top">
+      <img class="brand-mark" src="img/swarmpit-mark.svg" width="28" height="28" alt="">
+      <span class="brand-name">swarmpit</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Toggle menu</span>
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="primary-nav">
+      <li><a href="#features">features</a></li>
+      <li><a href="#install">install</a></li>
+      <li><a href="#contact">contact</a></li>
+      <li><a class="nav-cta" href="https://github.com/swarmpit/swarmpit" rel="noopener">github →</a></li>
+    </ul>
+  </nav>
 </header>
-<!-- Services -->
-<section id="features" class="nopadding">
+
+<main id="main">
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="dot"></span> v1.10 stable · open source</p>
+      <h1>
+        <span class="kw">swarmpit</span><span class="punct">()</span>
+        <span class="hero-sub" itemprop="description">Lightweight, AI-friendly docker swarm management.</span>
+      </h1>
+      <p class="lede">
+        Swarmpit provides simple and easy to use interface for your Docker Swarm cluster
+        without compromising your privacy. </br></br>Fully self-hosted, it never collects metrics or
+        any other data from you.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#install">$ install swarmpit</a>
+        <a class="btn btn-ghost" href="https://github.com/swarmpit/swarmpit" rel="noopener">view on github →</a>
+      </div>
+      <ul class="badges">
+        <li><span class="b-key">license</span><span class="b-val">EPL-1.0</span></li>
+        <li><span class="b-key">stars</span><span class="b-val">3.6k+</span></li>
+        <li><span class="b-key">docker</span><span class="b-val">pulls 5M+</span></li>
+      </ul>
+    </div>
+    <div class="hero-term" aria-hidden="true">
+      <div class="term">
+        <div class="term-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="term-title">~/swarmpit</span>
+        </div>
+        <pre class="term-body"><code><span class="prompt">$</span> docker run -it --rm \
+  --name <span class="hl">swarmpit-installer</span> \
+  --volume /var/run/docker.sock:/var/run/docker.sock \
+  swarmpit/install:1.10
+
+<span class="dim">→ pulling swarmpit/install:1.10</span>
+<span class="dim">→ initializing swarm cluster...</span>
+<span class="ok">✓ ready on http://localhost:888</span>
+<span class="prompt">$</span> <span class="cursor">_</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="screenshot" class="section section-alt section-screenshot">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2>Features</h2>
-        <p class="text-muted">Swarmpit provides nice &amp; clean way to manage your Docker Swarm cluster.</p>
-        <hr class="line">
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-3">
-      <hr class="section-heading-spacer">
-      <div class="clearfix"></div>
-      <div class="feature-item">
-         <i class="icon-grid text-primary"></i>
-        <h3 class="service-heading">Stack <br> management</h3>
-        <p class="text-muted">Compose new stack manually or let Swarmpit generate one from application state.</p>
-      </div>
-      </div>
-
-      <div class="col-md-3">
-      <hr class="section-heading-spacer">
-      <div class="clearfix"></div>
-      <div class="feature-item">
-         <i class="icon-screen-desktop text-primary"></i>
-        <h3 class="service-heading">Resource <br> monitoring</h3>
-        <p class="text-muted">Displays information about the use of hardware (CPU, memory, disk) in real-time</p>
-      </div>
-      </div>
-
-       <div class="col-md-3">
-      <hr class="section-heading-spacer">
-      <div class="clearfix"></div>
-      <div class="feature-item">
-         <i class="icon-settings text-primary"></i>
-        <h3 class="service-heading">Service <br> management</h3>
-        <p class="text-muted">Deploy and manage your services</p>
-      </div>
-      </div>
-
-       <div class="col-md-3">
-      <hr class="section-heading-spacer">
-      <div class="clearfix"></div>
-      <div class="feature-item">
-         <i class="icon-magnifier-add text-primary"></i>
-        <h3 class="service-heading">Smart <br> search</h3>
-        <p class="text-muted">Search for images accross public and private registries</p>
-      </div>
-      </div>
-
-    </div>
-
-          <div class="row text-center">
-      <div class="col-md-3">
-      <hr class="section-heading-spacer">
-      <div class="clearfix"></div>
-      <div class="feature-item">
-         <i class="icon-key text-primary"></i>
-        <h3 class="service-heading">Shared <br> access</h3>
-        <p class="text-muted">Allow multiple users to manage your Docker Swarm cluster safely</p>
-      </div>
-      </div>
-
-      <div class="col-md-3">
-      <hr class="section-heading-spacer">
-      <div class="clearfix"></div>
-      <div class="feature-item">
-         <i class="icon-disc text-primary"></i>
-        <h3 class="service-heading">Private <br> registry</h3>
-        <p class="text-muted">Pull private repositories from Docker Hub or custom registries</p>
-      </div>
-      </div>
-
-       <div class="col-md-3">
-      <hr class="section-heading-spacer">
-      <div class="clearfix"></div>
-      <div class="feature-item">
-        <i class="icon-refresh text-primary"></i>
-        <h3 class="service-heading">Service <br> autoredeploy</h3>
-        <p class="text-muted">Checks whether new service image has been published and update service accordingly</p>
-      </div>
-      </div>
-
-       <div class="col-md-3">
-      <hr class="section-heading-spacer">
-      <div class="clearfix"></div>
-      <div class="feature-item">
-        <w class="icon-plus text-primary"></w>
-        <a href="https://github.com/swarmpit/swarmpit/issues?q=is%3Aissue+is%3Aopen+label%3Akind%2Ffeature" target="_blank">
-        <h3 class="service-heading">Features <br> list</h3>
-        <p class="text-muted">Features list on <strong>github.com</strong></p></a>
-      </div>
-      </div>
-
-    </div>
+    <figure class="product-shot">
+      <img src="img/bg.png" alt="Swarmpit running on desktop, tablet and mobile" loading="lazy">
+    </figure>
   </div>
 </section>
 
-<section id=download class="download bg-primary text-center">
-  <div class=container>
-    <div class=row>
-      <div class="col-md-8 col-md-offset-2"><h2 class=section-heading>How to install</h2>
-        <hr>
-        <ul class="tabs">
-          <li><a class="btn btn-outline" href="#install-stable">Stable</a></li>
-          <li><a class="btn btn-outline" href="#install-edge">Edge</a></li>
-        </ul>
-        <div id="install-stable" class="tab">
-        <pre class=install>
-docker run -it --rm \
+<section id="features" class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="kicker">// features</p>
+      <h2>everything you need.<br><span class="muted">ai-ready, mcp-native.</span></h2>
+    </header>
+    <ul class="feature-grid">
+      <li class="feature">
+        <span class="feature-num">01</span>
+        <h3>stack management</h3>
+        <p>Compose new stacks manually or let Swarmpit generate one from your application state.</p>
+      </li>
+      <li class="feature">
+        <span class="feature-num">02</span>
+        <h3>resource monitoring</h3>
+        <p>Real-time CPU, memory and disk usage across every node in your cluster.</p>
+      </li>
+      <li class="feature">
+        <span class="feature-num">03</span>
+        <h3>service management</h3>
+        <p>Deploy, scale, roll back and inspect services with a clean, fast UI.</p>
+      </li>
+      <li class="feature">
+        <span class="feature-num">04</span>
+        <h3>shared access</h3>
+        <p>Allow multiple users to manage your Docker Swarm cluster — safely.</p>
+      </li>
+      <li class="feature">
+        <span class="feature-num">05</span>
+        <h3>private registry</h3>
+        <p>Pull private repositories from Docker Hub or your own custom registries.</p>
+      </li>
+      <li class="feature">
+        <span class="feature-num">06</span>
+        <h3>service autoredeploy</h3>
+        <p>Detects newly published images and rolls services forward automatically.</p>
+      </li>
+      <li class="feature feature-rest">
+        <span class="feature-num">07</span>
+        <h3>REST API</h3>
+        <p>Everything the UI does is exposed via REST. Swagger docs at <code>/api-docs</code> on any running instance.</p>
+      </li>
+      <li class="feature feature-mcp">
+        <span class="feature-num">08</span>
+        <h3>MCP server</h3>
+        <p>Drive Swarmpit from any MCP-compatible client — Claude Code, opencode, and friends. Automate deployments via LLM workflows.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="install" class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <p class="kicker">// install</p>
+      <h2>one command.<br><span class="muted">that's it.</span></h2>
+    </header>
+
+    <div class="tabs" role="tablist">
+      <button class="tab is-active" role="tab" aria-selected="true" data-tab="stable">stable</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="latest">latest</button>
+    </div>
+
+    <div class="tab-panel is-active" data-panel="stable">
+      <pre class="code-block"><button class="copy" data-copy>copy</button><code><span class="prompt">$</span> docker run -it --rm \
   --name swarmpit-installer \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-swarmpit/install:1.7</pre>
-        </div>
-        <div id="install-edge" class="tab tab--hidden">
-            <pre class=install>
-docker run -it --rm \
+  swarmpit/install:1.10</code></pre>
+    </div>
+
+    <div class="tab-panel" data-panel="latest">
+      <pre class="code-block"><button class="copy" data-copy>copy</button><code><span class="prompt">$</span> docker run -it --rm \
   --name swarmpit-installer \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-swarmpit/install:edge</pre>
-            </div>
-            <script>
-            var tabs = document.querySelector (".tabs");
-              tabs.addEventListener("click", function (e) {
-                e.preventDefault();
-                var id = e.target.getAttribute("href").substring(1)
-                var tabs = Array.from(document.querySelectorAll(".tab"))
-                tabs.forEach(function (t) {
-                  if (t.id == id) {
-                    t.classList.remove("tab--hidden")
-                  } else {
-                    t.classList.add("tab--hidden")
-                  }
-                })
-              })
-            </script>
-        <hr>
-        <p><a href=https://github.com/swarmpit/swarmpit#installation class="btn btn-outline btn-xl">View details</a>
-      </div>
+  swarmpit/install:latest</code></pre>
     </div>
+
+    <p class="install-foot">
+      <a class="btn btn-ghost" href="https://github.com/swarmpit/swarmpit#installation" rel="noopener">read full installation docs →</a>
+    </p>
   </div>
 </section>
 
-<section id="offer">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="section-heading">
-                    <h2 class="titleteam">What we offer</h2>
-                    <hr class="line">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-
-            <div class="col-md-6 col">
-                <div class="team padd text-center">
-                    <div class="title">
-                        <img src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_90,dpr_auto,w_auto:100/http://swarmpit.io/img/v1.5/ikona1.svg">
-                        <h3 class=""><strong>Consultation</strong></h3>
-                        <p>To help you with container adoption in dockerized world, please
-do not hesitate to <a href="mailto:team@swarmpit.io"><strong>drop us a message</strong> </a>. </p>
-<p>We can guide you or even
-design the best fitting solution based on your requirements.</p>
-<div class="blabla"><a class="page-scroll btn btn-outline-gray btn-xl" href="#form">More info</a></div>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-
-
-                <div class="col-md-6 col">
-                    <div class="team padd text-center">
-                        <div class="title">
-                             <img src="https://res.cloudinary.com/swarmpit/image/fetch/f_auto,q_90,dpr_auto,w_auto:100/http://swarmpit.io/img/v1.5/ikona2.svg">
-                            <h3 class=""><strong>We can help build the entire infrastructure</strong></h3>
-                            <p>Our Docker journey began with Tutum platform 3 years ago. With
-                              integration of Swarm mode we realized, that there is no platform
-                              fullfilling our needs so we started to write Swarmpit. Now we're
-                              succesfully running Docker on premises, 4 major fintech clusters
-                              in Azure and finally our internal infrastructure in AWS which was
-                              moved from Docker Cloud by using Terraform template. We believe
-                              that this strong Docker experience is going to make your life easier.</p>
-                              <a class="page-scroll btn btn-outline-gray btn-xl" href="#form">More info</a>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-              </div>
- 
-    </div>
-</section>
-
-
-<section id=form>
-  <div class=container>
-    <div class=row>
-      <div class="col-lg-12 text-center">
-        <div class=section-heading><h2 class="">Contact</h2>
-          <hr class=line>
-        </div>
+<section id="contact" class="section">
+  <div class="container container-narrow">
+    <header class="section-head">
+      <p class="kicker">// contact</p>
+      <h2>enlighten us.</h2>
+    </header>
+    <form id="contact-form" class="contact-form" novalidate>
+      <div class="row-2">
+        <label class="field">
+          <span class="field-label">name</span>
+          <input name="name" autocomplete="off" required>
+        </label>
+        <label class="field">
+          <span class="field-label">email</span>
+          <input type="email" name="email" autocomplete="off" required>
+        </label>
       </div>
-    </div>
-  </div>
-  <div class=container>
-    <div class=row>
-      <div class="col-lg-12 text-center">
-        <form role=form id=contact-form class=contact-form>
-          <div class=row>
-            <div class=col-md-6>
-              <div class=form-group><input class=form-control name=name autocomplete=off id=Name placeholder=Name></div>
-            </div>
-            <div class=col-md-6>
-              <div class=form-group><input type=email class=form-control name=email autocomplete=off id=email
-                                           placeholder=E-mail></div>
-            </div>
-          </div>
-          <div class=row>
-            <div class=col-md-12>
-              <div class=form-group><textarea class="form-control textarea" rows=3 name=message id=Message
-                                              placeholder=Message></textarea></div>
-            </div>
-          </div>
-          <div class=row>
-            <div class=col-md-12>
-              <button type=submit class="btn btn-primary btn-xl">Send a message</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+      <label class="field">
+        <span class="field-label">message</span>
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary">send →</button>
+    </form>
   </div>
 </section>
 
-<footer>
-  <div class=container>
-    <div class=row>
-      <div class="col-md-6 titleteam">
-          <div class="feature-item">
-            <i class="icon-speech text-primary"></i></div>
-        <div class="text-center links"><a href=https://gitter.im/swarmpit_io>gitter.im/swarmpit_io</a></div>
-      </div>
-      <div class=container>
-        <div class=row>
-          <div class="col-md-6 titleteam">
-              <div class="feature-item"><i class="icon-envelope text-primary"></i></div>
-            <div class="text-center links"><a href=mailto:team@swarmpit.io>team@swarmpit.io</a></div>
-          </div>
-        </div>
-      </div>
-      <div class=container><a href=https://www.topmonks.com><img src=./img/topmonks-logo.svg></a>
-        <p>Powered by<br>© 2018
-        <ul class=list-inline>
-          <li><a class=page-scroll href=#page-top>Top</a>
-          <li><a class=page-scroll href=#download>Install</a>
-          <li><a class=page-scroll href=#nopadding>Features</a>
-          <li><a class=page-scroll href=#offer>We offer</a>
-          <li><a class=page-scroll href=#form>Contact</a>
-        </ul>
-      </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <p class="brand"><img class="brand-mark" src="img/swarmpit-mark.svg" width="24" height="24" alt=""> <span class="brand-name">swarmpit</span></p>
+      <p class="muted">Lightweight, AI-friendly Docker Swarm management.<br>Open source, EPL-1.0.</p>
     </div>
+    <div class="footer-col">
+      <h4>project</h4>
+      <ul>
+        <li><a href="https://github.com/swarmpit/swarmpit" rel="noopener">github</a></li>
+        <li><a href="https://github.com/swarmpit/swarmpit/issues" rel="noopener">issues</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>contact</h4>
+      <ul>
+        <li><a href="mailto:team@swarmpit.io">team@swarmpit.io</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>navigate</h4>
+      <ul>
+        <li><a href="#features">features</a></li>
+        <li><a href="#install">install</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p class="muted">© <span id="year">2026</span> Swarmpit · made with <span class="heart">&lt;3</span> by the Swarmpit team</p>
   </div>
 </footer>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css
-      integrity="sha256-7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV/8erfDQz/Q=" crossorigin=anonymous>
-<!--[if lt IE 9]>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" defer></script>
-<![endif]--><!--[if gte IE 9]><!-->
-<script src=https://code.jquery.com/jquery-3.2.1.min.js defer
-        integrity=sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f
-        crossorigin=anonymous></script>
-        <!--<![endif]-->
-<script src=js/swarmpit.min.js defer></script>
+
+<script src="js/swarmpit.js" defer></script>
+</body>
+</html>

@@ -1,13 +1,8 @@
 node_modules/
-bower_components/
-s3/swarmpit.io/css/
-s3/swarmpit.io/js/*.min.js
-s3/swarmpit.io/lib/simple-line-icons/
+.pnpm-store/
 
 .idea/
+.vscode/
+.DS_Store
 
 *.log
-
-src/css/swarmpit.css
-.DS_Store
-package-lock.json
