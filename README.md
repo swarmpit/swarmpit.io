@@ -1,22 +1,18 @@
-# [swarmpit.io](http://swarmpit.io)
+# [swarmpit.io](https://swarmpit.io)
 
-website
+Landing page for [Swarmpit](https://github.com/swarmpit/swarmpit) — a static site built with vanilla HTML/CSS/JS, no build step.
 
-### Install dependencies
+## Local development
 
-```
-nvm use
-npm install
-```
-
-### Run dev server
-
-```
-npm start
+```bash
+nvm use            # node 20
+corepack enable    # makes pnpm available
+pnpm install
+pnpm dev           # http://localhost:3000
 ```
 
-### Build
+The contents of [`s3/swarmpit.io/`](s3/swarmpit.io/) are exactly what gets deployed — edit them directly.
 
-```
-npm run build
-```
+## Deployment
+
+Pushed to S3 + CloudFront via GitHub Actions on every push to `master`. See **[DEPLOYMENT.md](DEPLOYMENT.md)** for the one-time AWS setup (bucket, distribution, IAM, secrets).
